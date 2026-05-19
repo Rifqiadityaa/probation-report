@@ -1,0 +1,3301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Probation Report — Rifqi Aditya</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: #F0EFEB;
+            overflow: hidden;
+        }
+
+        .reveal-viewport {
+            background: #F0EFEB !important;
+        }
+
+        :root {
+            --bg-light: #F0EFEB;
+            --white: #FFFFFF;
+            --black: #0D0D0D;
+            --gray-text: #6B6B6B;
+            --gray-border: #DDDDD9;
+            --orange: #1f8dba;
+            --bg-dark: #0D0D0D;
+            --card-dark: #1A1A1A;
+            --border-dark: rgba(255, 255, 255, 0.09);
+            --muted-dark: rgba(255, 255, 255, 0.42);
+        }
+
+        /* reveal-viewport bg set globally above */
+        .reveal {
+            font-family: 'Inter', -apple-system, sans-serif;
+        }
+
+        .reveal .slides section {
+            text-align: left;
+            height: 100%;
+            padding: 0;
+        }
+
+        .meta-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 44px;
+            z-index: 20;
+        }
+
+        .meta-bar .section-name {
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            color: var(--gray-text);
+        }
+
+        .meta-bar .slide-num {
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--gray-text);
+        }
+
+        .meta-bar.dark .section-name,
+        .meta-bar.dark .slide-num {
+            color: var(--muted-dark);
+        }
+
+        .foot {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 44px;
+            z-index: 20;
+        }
+
+        .foot span {
+            font-size: 10px;
+            font-weight: 400;
+            color: var(--gray-text);
+        }
+
+        .foot.dark span {
+            color: var(--muted-dark);
+        }
+
+        /* SLIDE 1 */
+        .s1 {
+            width: 100%;
+            height: 100%;
+            background: var(--bg-light);
+            display: grid;
+            grid-template-columns: 5fr 7fr;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .s1-photo {
+            background: #D9D8D3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .s1-photo-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .s1-photo-placeholder svg {
+            width: 52px;
+            height: 52px;
+            stroke: rgba(0, 0, 0, 0.25);
+            fill: none;
+            stroke-width: 1.2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .s1-photo-placeholder span {
+            font-size: 11px;
+            color: rgba(0, 0, 0, 0.28);
+            letter-spacing: 0.05em;
+        }
+
+        .s1-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 40px 44px 40px 36px;
+        }
+
+        .s1-card {
+            background: var(--orange);
+            border-radius: 20px;
+            width: 100%;
+            height: calc(100% - 80px);
+            padding: 44px 44px 36px 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .s1-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: repeating-linear-gradient(-55deg, rgba(255, 255, 255, 0.04) 0px, rgba(255, 255, 255, 0.04) 1px, transparent 1px, transparent 28px);
+            border-radius: 20px;
+            pointer-events: none;
+        }
+
+        .s1-name {
+            font-size: 58px;
+            font-weight: 800;
+            line-height: 1.0;
+            letter-spacing: -0.03em;
+            color: #fff;
+        }
+
+        .s1-role {
+            margin-top: 12px;
+            font-size: 13px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.72);
+            letter-spacing: 0.01em;
+        }
+
+        .s1-divider {
+            width: 48px;
+            height: 1.5px;
+            background: rgba(255, 255, 255, 0.35);
+            margin: 28px 0;
+        }
+
+        .s1-edu-label {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.55);
+            margin-bottom: 6px;
+        }
+
+        .s1-edu-value {
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        .s1-edu-sub {
+            font-size: 12px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.55);
+            margin-top: 2px;
+        }
+
+        .s1-tl-label {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.55);
+            margin-bottom: 12px;
+            margin-top: 24px;
+        }
+
+        .tl {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tl-item {
+            display: grid;
+            grid-template-columns: 78px 12px 1fr;
+            column-gap: 12px;
+        }
+
+        .tl-date {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.45);
+            text-align: right;
+            padding-top: 2px;
+            line-height: 1.5;
+        }
+
+        .tl-spine {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tl-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.35);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .tl-dot.now {
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+        }
+
+        .tl-line {
+            width: 1px;
+            flex: 1;
+            min-height: 16px;
+            background: rgba(255, 255, 255, 0.15);
+            margin-top: 4px;
+        }
+
+        .tl-body {
+            padding-bottom: 12px;
+        }
+
+        .tl-co {
+            font-size: 12px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.4;
+        }
+
+        .tl-co.now {
+            color: #fff;
+        }
+
+        .tl-sub-role {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.38);
+            margin-top: 1px;
+        }
+
+        .tl-sub-role.now {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .s1-brand {
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.01em;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- ══════════════════════════════
+                 SLIDE 1 — PROFILE
+            ══════════════════════════════ -->
+            <section>
+                <div class="s1">
+                    <div class="meta-bar">
+                        <span class="section-name">Profile</span>
+                        <span class="slide-num">Probation Report · 01</span>
+                    </div>
+                    <div class="s1-photo">
+                        <div class="s1-photo-placeholder">
+                            <img src="./assets/profile.jpg" style="width: 100%;height: 100%;transform: scale(1.5);" />
+                        </div>
+                    </div>
+                    <div class="s1-right">
+                        <div class="s1-card">
+                            <div class="s1-card-top">
+                                <div class="s1-name">Rifqi Aditya</div>
+                                <div class="s1-role">Software Engineer &nbsp;·&nbsp; DDO Department &nbsp;·&nbsp;
+                                    PT. Mandala
+                                    Karya Prima</div>
+                                <div class="s1-divider"></div>
+                                <div class="s1-edu-label">Education</div>
+                                <div class="s1-edu-value">Bina Nusantara University</div>
+                                <div class="s1-edu-sub">Bachelor of Computer Science</div>
+                                <div class="s1-divider"></div>
+                                <div class="s1-tl-label">Experience</div>
+                                <div class="tl">
+                                    <div class="tl-item">
+                                        <div class="tl-date">FEB 2021</div>
+                                        <div class="tl-spine">
+                                            <div class="tl-dot"></div>
+                                            <div class="tl-line"></div>
+                                        </div>
+                                        <div class="tl-body">
+                                            <div class="tl-co">IDstar</div>
+                                            <div class="tl-sub-role">Robotic Process Automation Developer</div>
+                                        </div>
+                                    </div>
+                                    <div class="tl-item">
+                                        <div class="tl-date">Aug 2022</div>
+                                        <div class="tl-spine">
+                                            <div class="tl-dot"></div>
+                                            <div class="tl-line"></div>
+                                        </div>
+                                        <div class="tl-body">
+                                            <div class="tl-co">Koendang</div>
+                                            <div class="tl-sub-role">Software Engineer</div>
+                                        </div>
+                                    </div>
+                                    <div class="tl-item">
+                                        <div class="tl-date">Feb 2023</div>
+                                        <div class="tl-spine">
+                                            <div class="tl-dot"></div>
+                                            <div class="tl-line"></div>
+                                        </div>
+                                        <div class="tl-body">
+                                            <div class="tl-co">Gravel</div>
+                                            <div class="tl-sub-role">Web Engineer</div>
+                                        </div>
+                                    </div>
+                                    <div class="tl-item">
+                                        <div class="tl-date">Aug 2023</div>
+                                        <div class="tl-spine">
+                                            <div class="tl-dot"></div>
+                                            <div class="tl-line"></div>
+                                        </div>
+                                        <div class="tl-body">
+                                            <div class="tl-co">Bank Rakyat Indonesia</div>
+                                            <div class="tl-sub-role">Frontend Engineer</div>
+                                        </div>
+                                    </div>
+                                    <div class="tl-item">
+                                        <div class="tl-date">Mar 2026</div>
+                                        <div class="tl-spine">
+                                            <div class="tl-dot now"></div>
+                                        </div>
+                                        <div class="tl-body">
+                                            <div class="tl-co now">PT. Mandala Karya Prima</div>
+                                            <div class="tl-sub-role now">Software Engineer, DDO · Current</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══════════════════════════════
+                 SLIDE 2 — CORE BUSINESS PROCESS
+            ══════════════════════════════ -->
+            <section>
+                <div
+                    style="width:100%;height:100%;background:#F0EFEB;position:relative;overflow:hidden;font-family:'Inter',sans-serif;">
+                    <div
+                        style="position:absolute;top:0;left:0;right:0;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 44px;z-index:20;">
+                        <span style="font-size:11px;color:#6B6B6B;">Core Business Process</span>
+                        <span style="font-size:11px;color:#6B6B6B;">Probation Report · 02</span>
+                    </div>
+                    <div style="position:absolute;top:52px;left:44px;z-index:10;">
+                        <div
+                            style="font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#1f8dba;margin-bottom:8px;">
+                            Mandiri Group</div>
+                        <div
+                            style="font-size:38px;font-weight:800;color:black;line-height:1.05;letter-spacing:-0.02em;">
+                            What Business<br />Are We In?</div>
+                    </div>
+                    <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg"
+                        style="position:absolute;inset:0;width:100%;height:100%;">
+
+                        <!-- GROUP 1: ROAD (3 paths) -->
+                        <g id="s2-road">
+                            <path
+                                d="M 60,580 C 60,580 160,560 220,480 C 290,390 310,310 420,290 C 530,270 560,360 670,350 C 780,340 800,250 910,240 C 1010,230 1060,310 1140,360 C 1190,390 1220,430 1220,500"
+                                fill="none" stroke="#DDDDD9" stroke-width="48" stroke-linecap="round" />
+                            <path
+                                d="M 60,580 C 60,580 160,560 220,480 C 290,390 310,310 420,290 C 530,270 560,360 670,350 C 780,340 800,250 910,240 C 1010,230 1060,310 1140,360 C 1190,390 1220,430 1220,500"
+                                fill="none" stroke="rgba(0,0,0,0.12)" stroke-width="1.5" stroke-dasharray="18 14"
+                                stroke-linecap="round" />
+                            <path
+                                d="M 60,580 C 60,580 160,560 220,480 C 290,390 310,310 420,290 C 530,270 560,360 670,350 C 780,340 800,250 910,240 C 1010,230 1060,310 1140,360 C 1190,390 1220,430 1220,500"
+                                fill="none" stroke="#1f8dba" stroke-width="2.5" stroke-linecap="round" opacity="0.7" />
+                        </g>
+
+                        <!-- GROUP 2: LOCATION NODES (individual, animated in order) -->
+                        <!-- PIT -->
+                        <g id="s2-node-pit">
+                            <circle cx="220" cy="478" r="9" fill="#1f8dba" />
+                            <circle cx="220" cy="478" r="5" fill="#fff" />
+                            <rect x="160" y="490" width="120" height="40" rx="8" fill="#FFFFFF"
+                                stroke="rgba(0,0,0,0.10)" stroke-width="1" />
+                            <text x="220" y="515" text-anchor="middle" font-family="Inter,sans-serif" font-size="16"
+                                fill="#0D0D0D" font-weight="800" letter-spacing="-0.01em">PIT</text>
+                        </g>
+                        <!-- ROM -->
+                        <g id="s2-node-rom">
+                            <circle cx="420" cy="288" r="9" fill="#1f8dba" />
+                            <circle cx="420" cy="288" r="5" fill="#fff" />
+                            <rect x="346" y="298" width="148" height="42" rx="8" fill="#FFFFFF"
+                                stroke="rgba(0,0,0,0.10)" stroke-width="1" />
+                            <text x="420" y="316" text-anchor="middle" font-family="Inter,sans-serif" font-size="13"
+                                fill="#0D0D0D" font-weight="800" letter-spacing="-0.01em">ROM /</text>
+                            <text x="420" y="332" text-anchor="middle" font-family="Inter,sans-serif" font-size="13"
+                                fill="#0D0D0D" font-weight="800" letter-spacing="-0.01em">DISPOSAL</text>
+                        </g>
+                        <!-- PORT -->
+                        <g id="s2-node-port">
+                            <circle cx="910" cy="240" r="9" fill="#1f8dba" />
+                            <circle cx="910" cy="240" r="5" fill="#fff" />
+                            <rect x="840" y="250" width="140" height="40" rx="8" fill="#FFFFFF"
+                                stroke="rgba(0,0,0,0.10)" stroke-width="1" />
+                            <text x="910" y="275" text-anchor="middle" font-family="Inter,sans-serif" font-size="15"
+                                fill="#0D0D0D" font-weight="800" letter-spacing="-0.01em">PORT / CPP</text>
+                        </g>
+                        <!-- BUYER -->
+                        <g id="s2-node-buyer">
+                            <circle cx="1140" cy="360" r="9" fill="#1f8dba" />
+                            <circle cx="1140" cy="360" r="5" fill="#fff" />
+                            <rect x="1074" y="370" width="132" height="40" rx="8" fill="#fff" />
+                            <text x="1140" y="395" text-anchor="middle" font-family="Inter,sans-serif" font-size="16"
+                                fill="#0D0D0D" font-weight="800" letter-spacing="-0.01em">BUYER</text>
+                        </g>
+
+                        <!-- GROUP 3: MIP FLOATING CARD -->
+                        <g transform="translate(16, 0)" id="s2-mip">
+                            <rect x="555" y="78" width="170" height="80" rx="10" fill="#FFFFFF"
+                                stroke="rgba(31,141,186,0.50)" stroke-width="1" />
+                            <image x="580" y="90" width="120" height="60" href="./assets/mandiri-coal.png" />
+                        </g>
+
+                        <!-- GROUP 4: MANDIRI CONTRACTOR (PIT→ROM segment) -->
+                        <g id="s2-contractor">
+                            <line x1="260" y1="420" x2="260" y2="290" stroke="rgba(0,0,0,0.20)" stroke-width="1"
+                                stroke-dasharray="4 4" />
+                            <image x="180" y="160" width="170" height="80" href="./assets/mandiri-contractor.png" />
+                            <text x="260" y="280" text-anchor="middle" font-family="Inter,sans-serif" font-size="10"
+                                fill="rgba(0,0,0,0.35)" letter-spacing="0.1em" font-weight="500">ACTIVITY</text>
+                            <text x="260" y="245" text-anchor="middle" font-family="Inter,sans-serif" font-size="11"
+                                fill="rgba(0,0,0,0.55)" font-weight="400">OB Removal · Coal Getting</text>
+                            <text x="260" y="260" text-anchor="middle" font-family="Inter,sans-serif" font-size="11"
+                                fill="rgba(0,0,0,0.55)" font-weight="400">Unit Maintenance · Mining Services</text>
+                        </g>
+
+                        <!-- GROUP 5: MANDIRI SERVICES (ROM→PORT segment) -->
+                        <g id="s2-services">
+                            <line x1="660" y1="410" x2="660" y2="350" stroke="rgba(0,0,0,0.20)" stroke-width="1"
+                                stroke-dasharray="4 4" />
+                            <image x="580" y="440" width="170" height="80" href="./assets/mandiri-services.png" />
+                            <text x="660" y="430" text-anchor="middle" font-family="Inter,sans-serif" font-size="10"
+                                fill="rgba(0,0,0,0.35)" letter-spacing="0.1em" font-weight="500">ACTIVITY</text>
+                            <text x="660" y="450" text-anchor="middle" font-family="Inter,sans-serif" font-size="11"
+                                fill="rgba(0,0,0,0.55)">Coal Hauling</text>
+                        </g>
+
+                        <!-- GROUP 6: MANDIRI TRANSHIP (PORT→BUYER segment) -->
+                        <g id="s2-tranship">
+                            <line x1="1060" y1="220" x2="1060" y2="300" stroke="rgba(0,0,0,0.20)" stroke-width="1"
+                                stroke-dasharray="4 4" />
+                            <image x="1000" y="110" width="120" height="60" href="./assets/mandiri-tranship.png" />
+                            <text x="1060" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="10"
+                                fill="rgba(0,0,0,0.35)" letter-spacing="0.1em" font-weight="500">ACTIVITY</text>
+                            <text x="1060" y="190" text-anchor="middle" font-family="Inter,sans-serif" font-size="11"
+                                fill="rgba(0,0,0,0.55)">Coal Washing · Grading</text>
+                        </g>
+                        <!-- GROUP 6: ABP -->
+                        <g id="s2-abp" transform="translate(0, -320)"><text x="660" y="530" text-anchor="middle"
+                                font-family="Inter,sans-serif" font-size="10" fill="rgba(0,0,0,0.35)"
+                                letter-spacing="0.1em" font-weight="500">SUPPORT</text>
+                            <text x="660" y="550" text-anchor="middle" font-family="Inter,sans-serif" font-size="11"
+                                fill="rgba(0,0,0,0.55)">Vehicle Rent</text>
+                            <image href="./assets/abp.png" x="620" y="560" width="70" height="70" />
+                        </g>
+                    </svg>
+                    <div
+                        style="position:absolute;bottom:0;left:0;right:0;height:40px;display:flex;align-items:center;justify-content:space-between;padding:0 44px;">
+                        <span style="font-size:10px;color:#6B6B6B;">Mandiri Group · Business Flow</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══════════════════════════════
+                 SLIDE 3 — DEPARTMENT MAP (MKP)
+            ══════════════════════════════ -->
+            <section>
+                <div
+                    style="width:100%;height:100%;background:#F0EFEB;position:relative;overflow:hidden;font-family:'Inter',sans-serif;">
+
+                    <!-- Meta bar -->
+                    <div
+                        style="position:absolute;top:0;left:0;right:0;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 44px;z-index:20;">
+                        <span style="font-size:11px;color:#6B6B6B;">Department Map</span>
+                        <span style="font-size:11px;color:#6B6B6B;">Probation Report · 03</span>
+                    </div>
+
+                    <!-- Title -->
+                    <div id="s3-title-wrap" style="position:absolute;top:52px;left:44px;z-index:10;">
+                        <div id="s3-label"
+                            style="font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#1f8dba;margin-bottom:6px;">
+                            MKP Site & Head Office</div>
+                        <div id="s3-title"
+                            style="font-size:34px;font-weight:800;color:#0D0D0D;line-height:1.05;letter-spacing:-0.02em;">
+                            Big Map</div>
+                    </div>
+
+                    <!-- Legend -->
+                    <div id="s3-legend"
+                        style="position:absolute;top:60px;right:44px;z-index:10;display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                        <div style="display:flex;align-items:center;gap:8px;">
+                            <svg width="28" height="8">
+                                <line x1="0" y1="4" x2="28" y2="4" stroke="rgba(0,0,0,0.25)" stroke-width="1.5" />
+                            </svg>
+                            <span style="font-size:10px;color:#6B6B6B;letter-spacing:0.08em;">Site
+                                Flow</span>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:8px;">
+                            <svg width="28" height="8">
+                                <line x1="0" y1="4" x2="28" y2="4" stroke="#1f8dba" stroke-width="1.5"
+                                    stroke-dasharray="4 3" opacity="0.7" />
+                            </svg>
+                            <span style="font-size:10px;color:#6B6B6B;letter-spacing:0.08em;">HO
+                                Connection</span>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:8px;">
+                            <div
+                                style="width:28px;height:10px;border-radius:3px;background:rgba(0,0,0,0.05);border:1px dashed rgba(0,0,0,0.20);">
+                            </div>
+                            <span style="font-size:10px;color:#6B6B6B;letter-spacing:0.08em;">Site
+                                Office</span>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:8px;">
+                            <div
+                                style="width:28px;height:10px;border-radius:3px;background:rgba(31,141,186,0.06);border:1px dashed rgba(31,141,186,0.40);">
+                            </div>
+                            <span style="font-size:10px;color:#6B6B6B;letter-spacing:0.08em;">Head
+                                Office</span>
+                        </div>
+                    </div>
+
+                    <!--
+                    ═══════════════════════════════════════════════════
+                    LAYOUT GUIDE (viewBox 0 0 1280 720)
+                    ───────────────────────────────────────────────────
+                    Site boundary:  x=230  y=100  w=760  h=560  (right edge x=990)
+                    HO Left box:    x=20   y=270  w=190  h=310  (right edge x=210)
+                    HO Right box:   x=1060 y=270  w=200  h=300
+
+                    TOP ROW (y=166, h=58):
+                      INPUT    cx=115  → x=75   (pill)
+                      ENG      cx=328  → x=248  w=160
+                      PROD     cx=548  → x=468  w=160
+                      OUTPUT   cx=728  → x=658  w=140
+                      ENG.DEPT cx=900  → x=845  (pill, outside site)
+
+                    LEFT BRANCH from PROD (center x=548):
+                      PLANT    cx=368  → x=288  y=330  w=160
+                      WAREHOUSE cx=368 → x=288  y=450  w=160
+
+                    RIGHT BRANCH from PROD (center x=548):
+                      HRG      cx=700  → x=650  y=330  w=100
+                      TDC      cx=820  → x=770  y=330  w=100  ← branch connects here (center)
+                      IT       cx=940  → x=890  y=330  w=100
+
+                    HSE: cx=548  → x=468  y=555  w=160  (centered under PROD)
+
+                    HO LEFT nodes (x=35, w=160):
+                      FAT  y=295
+                      SCM  y=385
+                      HRG  y=475
+
+                    HO RIGHT nodes (x=1075, w=160):
+                      HRG  y=295
+                      DDO  y=390  (orange highlighted)
+                    ═══════════════════════════════════════════════════
+                    -->
+
+                    <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg"
+                        style="position:absolute;inset:0;width:100%;height:100%;">
+                        <defs>
+                            <marker id="aw" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+                                <path d="M0,0 L0,6 L7,3 z" fill="rgba(0,0,0,0.30)" />
+                            </marker>
+                            <marker id="ao" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+                                <path d="M0,0 L0,6 L7,3 z" fill="rgba(31,141,186,0.70)" />
+                            </marker>
+                            <filter id="glow2">
+                                <feGaussianBlur stdDeviation="4" result="blur" />
+                                <feMerge>
+                                    <feMergeNode in="blur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                        </defs>
+
+                        <!-- ══ BOUNDARIES ══════════════════════════════════════════ -->
+
+                        <!-- Site boundary — move by changing translate(230,100) -->
+                        <g id="g-site-boundary" transform="translate(230,100)">
+                            <rect x="0" y="0" width="760" height="440" rx="14" fill="none" stroke="rgba(0,0,0,0.12)"
+                                stroke-width="1.5" stroke-dasharray="9 6" />
+                        </g>
+
+                        <!-- HO Left boundary — move by changing translate(20,270) -->
+                        <!-- Contains boundary rect + FAT + SCM nodes -->
+                        <g id="g-ho-left" transform="translate(273,580)">
+                            <!-- Boundary -->
+                            <rect x="0" y="0" width="395" height="90" rx="14" fill="rgba(31,141,186,0.03)"
+                                stroke="rgba(31,141,186,0.30)" stroke-width="1" stroke-dasharray="6 5" />
+
+                            <!-- FAT — relative to g-ho-left: (15, 15) -->
+                            <!-- Absolute position: (35, 285) -->
+                            <g transform="translate(15,15)">
+                                <a href="#/9" style="cursor:pointer;">
+                                    <rect x="0" y="0" width="160" height="58" rx="10" fill="#FFFFFF"
+                                        stroke="rgba(31,141,186,0.45)" stroke-width="1" />
+                                    <text x="80" y="25" text-anchor="middle" font-family="Inter,sans-serif"
+                                        font-size="12" fill="#0D0D0D" font-weight="700">FAT</text>
+                                    <text x="80" y="40" text-anchor="middle" font-family="Inter,sans-serif"
+                                        font-size="9" fill="#9B9B9B">Budget &amp; Accounting</text>
+                                </a>
+                            </g>
+
+                            <!-- SCM — relative to g-ho-left: (15, 85) -->
+                            <!-- Absolute position: (35, 355) -->
+                            <g transform="translate(220,16)">
+                                <a href="#/9" style="cursor:pointer;">
+                                    <rect x="0" y="0" width="160" height="58" rx="10" fill="#FFFFFF"
+                                        stroke="rgba(31,141,186,0.45)" stroke-width="1" />
+                                    <text x="80" y="25" text-anchor="middle" font-family="Inter,sans-serif"
+                                        font-size="12" fill="#0D0D0D" font-weight="700">SCM</text>
+                                    <text x="80" y="40" text-anchor="middle" font-family="Inter,sans-serif"
+                                        font-size="9" fill="#9B9B9B">Vendor &amp; Procurement</text>
+                                </a>
+                            </g>
+                        </g>
+
+                        <!-- HO Right boundary — move by changing translate(1060,270) -->
+                        <!-- Contains boundary rect + HRG + DDO nodes -->
+                        <g id="g-ho-right" transform="translate(1030,270)">
+                            <!-- Boundary -->
+                            <rect x="0" y="0" width="190" height="190" rx="14" fill="rgba(31,141,186,0.03)"
+                                stroke="rgba(31,141,186,0.30)" stroke-width="1" stroke-dasharray="6 5" />
+
+                            <!-- HRG — relative to g-ho-right: (15, 15) -->
+                            <!-- Absolute position: (1075, 285) -->
+                            <g transform="translate(15,15)">
+                                <a href="#/9" style="cursor:pointer;">
+                                    <rect x="0" y="0" width="160" height="58" rx="10" fill="#FFFFFF"
+                                        stroke="rgba(31,141,186,0.45)" stroke-width="1" />
+                                    <text x="80" y="25" text-anchor="middle" font-family="Inter,sans-serif"
+                                        font-size="12" fill="#0D0D0D" font-weight="700">HRG</text>
+                                    <text x="80" y="40" text-anchor="middle" font-family="Inter,sans-serif"
+                                        font-size="9" fill="#9B9B9B">HR &amp; People Dev</text>
+                                </a>
+                            </g>
+
+                            <!-- DDO — relative to g-ho-right: (15, 100) -->
+                            <!-- Absolute position: (1075, 370) → cx=1155, cy=405 -->
+                            <g transform="translate(15,100)">
+                                <a href="#/9" style="cursor:pointer;">
+                                    <rect x="0" y="0" width="160" height="70" rx="14" fill="#1f8dba"
+                                        filter="url(#glow2)" />
+                                    <text x="80" y="30" text-anchor="middle" font-family="Inter,sans-serif"
+                                        font-size="20" fill="#fff" font-weight="800" letter-spacing="-0.01em">DDO</text>
+                                    <text x="80" y="50" text-anchor="middle" font-family="Inter,sans-serif"
+                                        font-size="9" fill="rgba(255,255,255,0.80)">Data &amp; Digital Operations</text>
+                                </a>
+                            </g>
+                        </g>
+
+                        <!-- ══ CONNECTORS (HO↔Site) ════════════════════════════════ -->
+                        <!-- Right HO left edge (x=1060,y=370) → Site right edge (x=990,y=370) -->
+                        <!-- DDO abs: (1075,370), cy=405 → use y=370 for connection at top of DDO -->
+                        <line data-anim="connector" x1="1030" y1="360" x2="990" y2="360" stroke="#1f8dba"
+                            stroke-width="1.2" stroke-dasharray="5 4" />
+
+                        <!-- SCM right (cx=368,y=388) → FAT left (cx=150,y=450) -->
+                        <line data-anim="connector" x1="450" y1="625" x2="490" y2="625" stroke="rgba(0,0,0,0.15)"
+                            stroke-width="1" marker-end="url(#aw)" />
+
+                        <!-- Bottom HO (cx=368,y=650) → right(cx=150,y=450) -->
+                        <line data-anim="connector" x1="1125" y1="625" x2="670" y2="625" stroke="#1f8dba"
+                            stroke-width="1.2" stroke-dasharray="5 4" />
+
+                        <!-- Right HO (cx=368,y=650) → bottom (cx=150,y=450) -->
+                        <line data-anim="connector" x1="1125" y1="460" x2="1125" y2="625" stroke="#1f8dba"
+                            stroke-width="1.2" stroke-dasharray="5 4" />
+
+
+                        <!-- ══ SITE FLOW CONNECTORS ════════════════════════════════ -->
+                        <!-- INPUT right (x=175,y=195) → ENGINEERING left (x=300,y=195) -->
+                        <line data-anim="connector" x1="175" y1="195" x2="298" y2="195" stroke="rgba(0,0,0,0.25)"
+                            stroke-width="1.2" marker-end="url(#aw)" />
+
+                        <!-- ENGINEERING right (x=460,y=195) → PRODUCTION left (x=550,y=195) -->
+                        <line data-anim="connector" x1="462" y1="195" x2="548" y2="195" stroke="rgba(0,0,0,0.25)"
+                            stroke-width="1.2" marker-end="url(#aw)" />
+
+                        <!-- PRODUCTION right (x=710,y=195) → ENG.DEPT left (x=800,y=195) -->
+                        <line data-anim="connector" x1="712" y1="195" x2="798" y2="195" stroke="rgba(0,0,0,0.25)"
+                            stroke-width="1.2" marker-end="url(#aw)" />
+
+                        <!-- ENG.DEPT right (x=940,y=195) → OUTPUT left (x=1050,y=195) -->
+                        <line data-anim="connector" x1="942" y1="195" x2="1018" y2="195" stroke="rgba(0,0,0,0.12)"
+                            stroke-width="1.2" marker-end="url(#aw)" />
+
+                        <!-- PRODUCTION center (cx=630) → down → left to PLANT top (cx=368,y=330) -->
+                        <path data-anim="connector" d="M 630,224 L 630,270 L 368,270 L 368,330" fill="none"
+                            stroke="rgba(0,0,0,0.12)" stroke-width="1.2" marker-end="url(#aw)" />
+
+                        <!-- PLANT bottom (cx=368,y=388) → WAREHOUSE top (cx=368,y=450) -->
+                        <line data-anim="connector" x1="368" y1="388" x2="368" y2="448" stroke="rgba(0,0,0,0.12)"
+                            stroke-width="1" marker-end="url(#aw)" />
+
+                        <!-- WAREHOUSE bottom (cx=368,y=388) → SCM top (cx=368,y=450) -->
+                        <line data-anim="connector" x1="368" y1="388" x2="368" y2="592" stroke="rgba(0,0,0,0.12)"
+                            stroke-width="1" marker-end="url(#aw)" />
+
+                        <!-- PRODUCTION center (cx=630) → down → right to TDC top (cx=820,y=330) -->
+                        <path data-anim="connector" d="M 630,224 L 630,270 L 820,270 L 820,330" fill="none"
+                            stroke="rgba(0,0,0,0.12)" stroke-width="1.2" marker-end="url(#aw)" />
+
+                        <!-- ══ SITE NODES ══════════════════════════════════════════ -->
+
+                        <!-- INPUT pill — move by changing translate(75,166) -->
+                        <!-- w=100 h=58 rx=29 → center=(50,29), abs center=(125,195) -->
+                        <g id="g-input" transform="translate(60,166)">
+                            <rect x="0" y="0" width="140" height="58" rx="29" fill="#FFFFFF" stroke="rgba(0,0,0,0.10)"
+                                stroke-width="1" />
+                            <text x="70" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="12"
+                                fill="#0D0D0D" font-weight="700">INPUT</text>
+                            <text x="70" y="42" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"
+                                fill="#9B9B9B">Mine master plan by MIP</text>
+                        </g>
+
+                        <!-- ENGINEERING — move by changing translate(300,166) -->
+                        <!-- w=160 h=58 → center=(80,29), abs center=(380,195) -->
+                        <g id="g-engineering" transform="translate(300,166)">
+                            <a href="#/9" style="cursor:pointer;">
+                                <rect x="0" y="0" width="160" height="58" rx="10" fill="#FFFFFF"
+                                    stroke="rgba(0,0,0,0.10)" stroke-width="1" />
+                                <text x="80" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="12"
+                                    fill="#0D0D0D" font-weight="700">ENGINEERING</text>
+                                <text x="80" y="44" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"
+                                    fill="#9B9B9B">Mapping &amp; Planning</text>
+                            </a>
+                        </g>
+
+                        <!-- PRODUCTION — move by changing translate(550,166) -->
+                        <!-- w=160 h=58 → center=(80,29), abs center=(630,195) -->
+                        <g id="g-production" transform="translate(550,166)">
+                            <a href="#/9" style="cursor:pointer;">
+                                <rect x="0" y="0" width="160" height="58" rx="10" fill="#FFFFFF"
+                                    stroke="rgba(0,0,0,0.10)" stroke-width="1" />
+                                <text x="80" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="12"
+                                    fill="#0D0D0D" font-weight="700">PRODUCTION</text>
+                                <text x="80" y="44" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"
+                                    fill="#9B9B9B">Executing the Plan</text>
+                            </a>
+                        </g>
+
+                        <!-- ENG.DEPT — move by changing translate(800,166) -->
+                        <!-- w=140 h=58 → center=(70,29), abs center=(870,195) -->
+                        <g id="g-engdept" transform="translate(800,166)">
+                            <a href="#/9" style="cursor:pointer;">
+                                <rect x="0" y="0" width="140" height="58" rx="10" fill="#FFFFFF"
+                                    stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+                                <text x="70" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="12"
+                                    fill="#0D0D0D" font-weight="700">ENGINEERING</text>
+                                <text x="70" y="44" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"
+                                    fill="#9B9B9B">Receives report</text>
+                            </a>
+                        </g>
+
+                        <!-- OUTPUT pill — move by changing translate(1050,166) -->
+                        <!-- w=130 h=58 rx=29 → center=(65,29), abs center=(1115,195) -->
+                        <g id="g-output" transform="translate(1020,166)">
+                            <rect x="0" y="0" width="200" height="58" rx="29" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)"
+                                stroke-width="1" />
+                            <text x="100" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="11"
+                                fill="#0D0D0D" font-weight="700">OUTPUT</text>
+                            <text x="100" y="42" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"
+                                fill="#9B9B9B">Data report to all Department and MIP</text>
+                        </g>
+
+                        <!-- PLANT — move by changing translate(288,330) -->
+                        <!-- w=160 h=58 → center=(80,29), abs center=(368,359) -->
+                        <g id="g-plant" transform="translate(288,330)">
+                            <a href="#/9" style="cursor:pointer;">
+                                <rect x="0" y="0" width="160" height="58" rx="10" fill="#FFFFFF"
+                                    stroke="rgba(0,0,0,0.10)" stroke-width="1" />
+                                <text x="80" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="12"
+                                    fill="#0D0D0D" font-weight="700">PLANT</text>
+                                <text x="80" y="44" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"
+                                    fill="#9B9B9B">Unit Availability</text>
+                            </a>
+                        </g>
+
+                        <!-- WAREHOUSE — move by changing translate(288,450) -->
+                        <!-- w=160 h=58 → center=(80,29), abs center=(368,479) -->
+                        <g id="g-warehouse" transform="translate(288,450)">
+                            <a href="#/9" style="cursor:pointer;">
+                                <rect x="0" y="0" width="160" height="58" rx="10" fill="#FFFFFF"
+                                    stroke="rgba(0,0,0,0.10)" stroke-width="1" />
+                                <text x="80" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="12"
+                                    fill="#0D0D0D" font-weight="700">WAREHOUSE</text>
+                                <text x="80" y="44" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"
+                                    fill="#9B9B9B">Parts &amp; Supply</text>
+                            </a>
+                        </g>
+
+                        <!-- HRG — move by changing translate(650,330) -->
+                        <!-- w=100 h=58 → center=(50,29), abs center=(700,359) -->
+                        <g id="g-hrg" transform="translate(650,330)">
+                            <a href="#/9" style="cursor:pointer;">
+                                <rect x="0" y="0" width="100" height="58" rx="10" fill="#FFFFFF"
+                                    stroke="rgba(0,0,0,0.10)" stroke-width="1" />
+                                <text x="50" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="12"
+                                    fill="#0D0D0D" font-weight="700">HRG</text>
+                                <text x="50" y="44" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"
+                                    fill="#9B9B9B">People Dev</text>
+                            </a>
+                        </g>
+
+                        <!-- TDC — move by changing translate(770,330) -->
+                        <!-- w=100 h=58 → center=(50,29), abs center=(820,359) -->
+                        <g id="g-tdc" transform="translate(770,330)">
+                            <a href="#/9" style="cursor:pointer;">
+                                <rect x="0" y="0" width="100" height="58" rx="10" fill="#FFFFFF"
+                                    stroke="rgba(0,0,0,0.10)" stroke-width="1" />
+                                <text x="50" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="12"
+                                    fill="#0D0D0D" font-weight="700">TDC</text>
+                                <text x="50" y="44" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"
+                                    fill="#9B9B9B">Training Dev</text>
+                            </a>
+                        </g>
+
+                        <!-- IT — move by changing translate(890,330) -->
+                        <!-- w=80 h=58 → center=(40,29), abs center=(930,359) -->
+                        <g id="g-it" transform="translate(890,330)">
+                            <a href="#/9" style="cursor:pointer;">
+                                <rect x="0" y="0" width="80" height="58" rx="10" fill="#FFFFFF"
+                                    stroke="rgba(0,0,0,0.10)" stroke-width="1" />
+                                <text x="40" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="12"
+                                    fill="#0D0D0D" font-weight="700">IT</text>
+                                <text x="40" y="44" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"
+                                    fill="#9B9B9B">Systems</text>
+                            </a>
+                        </g>
+
+                        <!-- HSE — move by changing translate(720,510) -->
+                        <!-- w=200 h=58 → center=(100,29), abs center=(820,539) -->
+                        <g id="g-hse" transform="translate(720,510)">
+                            <a href="#/9" style="cursor:pointer;">
+                                <rect x="0" y="0" width="200" height="58" rx="10" fill="#FFFFFF"
+                                    stroke="rgba(0,0,0,0.10)" stroke-width="1" />
+                                <text x="100" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="12"
+                                    fill="#0D0D0D" font-weight="700">HSE</text>
+                                <text x="100" y="44" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"
+                                    fill="#9B9B9B">Health, Safety &amp; Environment</text>
+                            </a>
+                        </g>
+
+                    </svg>
+
+                    <!-- Footer -->
+                    <div
+                        style="position:absolute;bottom:0;left:0;right:0;height:40px;display:flex;align-items:center;justify-content:space-between;padding:0 44px;">
+                        <span style="font-size:10px;color:#6B6B6B;">MKP · Department Structure</span>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            controls: false,
+            progress: false,
+            slideNumber: false,
+            transition: 'fade',
+            transitionSpeed: 'slow',
+            width: 1280,
+            height: 720,
+        });
+    </script>
+
+    <!-- SLIDES 4–5: DDO BUSINESS PROCESS (injected via JS after Reveal init) -->
+    <div class="reveal" style="display:none;"></div>
+
+    <!-- ══════════════════════════════════════════════════
+         GLOBAL ENHANCEMENTS
+         1. Progress dot indicator (all slides)
+         2. GSAP entrance animations for Slides 1, 2, 3
+    ══════════════════════════════════════════════════ -->
+    <script>
+        // ── Progress dot indicator ────────────────────────────────────────
+        // Injected once after Reveal is ready, updates on every slide change
+        Reveal.on('ready', () => {
+            const TOTAL = 12; // total slides
+            const OR = '#1f8dba';
+
+            // Build indicator container
+            const bar = document.createElement('div');
+            bar.id = 'progress-dots';
+            bar.style.cssText = `
+            position: fixed;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 7px;
+            align-items: center;
+            z-index: 9999;
+            pointer-events: none;`;
+
+            for (let i = 0; i < TOTAL; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'pdot';
+                dot.dataset.idx = i;
+                dot.style.cssText = `
+                width: 5px; height: 5px; border-radius: 50%;
+                background: rgba(0,0,0,0.20);
+                transition: all 0.3s ease;
+                flex-shrink: 0;`;
+                bar.appendChild(dot);
+            }
+
+            document.body.appendChild(bar);
+
+            function updateDots(idx) {
+                document.querySelectorAll('.pdot').forEach((d, i) => {
+                    if (i === idx) {
+                        d.style.background = OR;
+                        d.style.width = '18px';
+                        d.style.borderRadius = '3px';
+                    } else {
+                        d.style.background = 'rgba(0,0,0,0.20)';
+                        d.style.width = '5px';
+                        d.style.borderRadius = '50%';
+                    }
+                });
+            }
+
+            updateDots(Reveal.getIndices().h);
+            Reveal.on('slidechanged', ({ indexh }) => updateDots(indexh));
+        });
+
+        // ── GSAP: Slide 1 (Profile) entrance ─────────────────────────────
+        Reveal.on('ready', () => {
+            const slide1 = document.querySelector('.reveal .slides section:first-child');
+            if (!slide1) return;
+
+            function animS1() {
+                const photo = slide1.querySelector('.s1-photo');
+                const card = slide1.querySelector('.s1-card');
+                const name = slide1.querySelector('.s1-name');
+                const role = slide1.querySelector('.s1-role');
+                const eduLabel = slide1.querySelector('.s1-edu-label');
+                const eduValue = slide1.querySelector('.s1-edu-value');
+                const eduSub = slide1.querySelector('.s1-edu-sub');
+                const divs = slide1.querySelectorAll('.s1-divider');
+                const tlLabel = slide1.querySelector('.s1-tl-label');
+                const tls = slide1.querySelectorAll('.tl-item');
+                if (!card) return;
+
+                gsap.set(photo, { opacity: 0, x: -30 });
+                gsap.set(card, { opacity: 0, x: 40, borderRadius: '40px' });
+                gsap.set(name, { opacity: 0, y: 16 });
+                gsap.set(role, { opacity: 0 });
+                gsap.set(divs, { scaleX: 0, transformOrigin: 'left center' });
+                gsap.set(eduLabel, { opacity: 0, y: 16 });
+                gsap.set(eduValue, { opacity: 0, y: 16 });
+                gsap.set(eduSub, { opacity: 0, y: 16 });
+                gsap.set(tlLabel, { opacity: 0, y: 16 });
+                gsap.set(tls, { opacity: 0, x: 12 });
+
+                const tl = gsap.timeline({ delay: 0.1 });
+
+                tl.to(photo, { opacity: 1, x: 0, duration: 0.55, ease: 'power3.out' });
+                tl.to(card, {
+                    opacity: 1, x: 0, borderRadius: '20px',
+                    duration: 0.55, ease: 'power3.out'
+                }, '-=0.4');
+                tl.to(name, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, '-=0.2');
+                tl.to(role, { opacity: 1, duration: 0.3 }, '-=0.1');
+                tl.to(divs, { scaleX: 1, duration: 0.4, ease: 'power2.out', stagger: 0.1 }, '-=0.1');
+                tl.to(eduLabel, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, '-=0.2');
+                tl.to(eduValue, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, '-=0.2');
+                tl.to(eduSub, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, '-=0.2');
+                tl.to(tlLabel, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, '-=0.2');
+                tl.to(tls, {
+                    opacity: 1, x: 0, duration: 0.35,
+                    ease: 'power2.out', stagger: 0.08
+                }, '-=0.25');
+            }
+
+            // Trigger on first load if slide 1 is active
+            if (Reveal.getIndices().h === 0) animS1();
+            Reveal.on('slidechanged', ({ indexh }) => { if (indexh === 0) animS1(); });
+        });
+
+        // ── GSAP: Slide 2 (Business Process) sequential road reveal ───────
+        Reveal.on('ready', () => {
+            const slides = document.querySelectorAll('.reveal .slides section');
+            const slide2 = slides[1];
+            if (!slide2) return;
+
+            function animS2() {
+                const title = slide2.querySelector('div[style*="What Business"]');
+                const label = slide2.querySelector('div[style*="Mandiri Group"]');
+
+                const road = document.getElementById('s2-road');
+                const nodePit = document.getElementById('s2-node-pit');
+                const nodeRom = document.getElementById('s2-node-rom');
+                const nodePort = document.getElementById('s2-node-port');
+                const nodeBuyer = document.getElementById('s2-node-buyer');
+                const mip = document.getElementById('s2-mip');
+                const contractor = document.getElementById('s2-contractor');
+                const services = document.getElementById('s2-services');
+                const tranship = document.getElementById('s2-tranship');
+                const abp = document.getElementById('s2-abp');
+
+                if (!road) return;
+
+                // Reset all via inline style
+                [road, nodePit, nodeRom, nodePort, nodeBuyer,
+                    mip, contractor, services, tranship, abp].forEach(el => {
+                        if (el) el.style.opacity = '0';
+                    });
+                if (label) gsap.set(label, { opacity: 0, y: -8 });
+                if (title) gsap.set(title, { opacity: 0, y: 8 });
+                gsap.set([nodePit, nodeRom, nodePort, nodeBuyer], { scale: 0.5 });
+                gsap.set([mip, contractor, services, tranship, abp], { scale: 0.92 });
+
+                const tl = gsap.timeline({ delay: 0.15 });
+
+                // 0. Title
+                if (label) tl.to(label, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' });
+                if (title) tl.to(title, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, '-=0.15');
+
+                // 1. Road draws in
+                tl.to(road, { opacity: 1, duration: 0.7, ease: 'power2.out' }, '-=0.1');
+
+                // 2. Nodes pop in left → right with spring
+                tl.to(nodePit, { opacity: 1, scale: 1, duration: 0.35, ease: 'back.out(2)' }, '-=0.1');
+                tl.to(nodeRom, { opacity: 1, scale: 1, duration: 0.35, ease: 'back.out(2)' }, '-=0.15');
+                tl.to(nodePort, { opacity: 1, scale: 1, duration: 0.35, ease: 'back.out(2)' }, '-=0.15');
+                tl.to(nodeBuyer, { opacity: 1, scale: 1, duration: 0.35, ease: 'back.out(2)' }, '-=0.15');
+
+                // 3. MIP card
+                tl.to(mip, { opacity: 1, scale: 1, duration: 0.4, ease: 'back.out(1.4)' }, '-=0.05');
+
+                // 4. Mandiri Contractor + activity
+                tl.to(contractor, { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out' }, '+=0.1');
+
+                // 5. Mandiri Services + activity
+                tl.to(services, { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out' }, '+=0.1');
+
+                // 6. Mandiri Tranship + activity
+                tl.to(tranship, { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out' }, '+=0.1');
+
+                // 7. ABP
+                tl.to(abp, { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out' }, '+=0.1');
+            }
+
+            if (Reveal.getIndices().h === 1) animS2();
+            Reveal.on('slidechanged', ({ indexh }) => { if (indexh === 1) animS2(); });
+        });
+
+        // Slide 3 animation removed — diagram renders statically
+
+    </script>
+
+    <script>
+        const BG = '#F0EFEB';
+        const SURF = '#FFFFFF';
+        const S2 = '#E8E7E3';
+        const BDR = 'rgba(0,0,0,0.08)';
+        const OR = '#1f8dba';
+        const W = '#0D0D0D';
+        const MU = '#6B6B6B';
+        const DIM = 'rgba(0,0,0,0.14)';
+        const F = "'Inter',-apple-system,sans-serif";
+
+        const mb = (sec, num = '04') => `
+        <div style="position:absolute;top:0;left:0;right:0;height:44px;display:flex;
+                    align-items:center;justify-content:space-between;padding:0 44px;z-index:30;">
+            <span style="font-size:11px;color:${MU};font-family:${F};">${sec}</span>
+            <span style="font-size:11px;color:${MU};font-family:${F};">Probation Report · ${num}</span>
+        </div>`;
+
+        const fb = (r = '') => `
+        <div style="position:absolute;bottom:0;left:0;right:0;height:40px;display:flex;
+                    align-items:center;justify-content:space-between;padding:0 44px;z-index:30;">
+            <span style="font-size:10px;color:${DIM};font-family:${F};">${r}</span>
+        </div>`;
+
+        const arr = (c = DIM) =>
+            `<div style="flex-shrink:0;display:flex;align-items:center;padding:0 6px;">
+            <svg width="18" height="12" viewBox="0 0 18 12">
+                <path d="M0 6 L13 6 M9 2 L14 6 L9 10"
+                      stroke="${c}" stroke-width="1.4" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>`;
+
+        const node = (lbl, sub = '', hi = false) =>
+            `<div style="flex:1;background:${hi ? OR : SURF};border:1px solid ${hi ? OR : BDR};
+                     border-radius:10px;padding:14px 12px;text-align:center;">
+            <div style="font-size:12px;font-weight:700;color:${hi ? SURF : W};font-family:${F};
+                        line-height:1.35;">${lbl}</div>
+            ${sub ? `<div style="font-size:9.5px;color:${hi ? 'rgba(255,255,255,0.72)' : MU};
+                       margin-top:4px;font-family:${F};">${sub}</div>` : ''}
+        </div>`;
+
+        const card = (title, lines) =>
+            `<div style="background:${SURF};border:1px solid ${BDR};border-radius:12px;padding:20px 22px;">
+            <div style="font-size:9.5px;font-weight:700;color:${OR};letter-spacing:0.12em;
+                        text-transform:uppercase;margin-bottom:10px;font-family:${F};">${title}</div>
+            <div style="font-size:12px;color:${MU};line-height:1.85;font-family:${F};">
+                ${lines.join('<br/>')}
+            </div>
+        </div>`;
+
+        const crumb = (active) => {
+            const ps = ['Project Preparation', 'Product Development', 'Project Implementation'];
+            return `<div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
+            <span style="font-size:10px;font-weight:700;color:${OR};letter-spacing:0.1em;
+                         text-transform:uppercase;font-family:${F};margin-right:4px;">
+                DIGITAL SOLUTION</span>
+            ${ps.map((p, i) => `
+                ${i > 0 ? `<svg width="10" height="8" viewBox="0 0 10 8">
+                    <path d="M0 4 L7 4 M4 1 L8 4 L4 7" stroke="${DIM}"
+                          stroke-width="1.1" fill="none" stroke-linecap="round"/>
+                </svg>`: ''}
+                <div style="padding:4px 13px;border-radius:16px;font-size:9.5px;font-weight:500;
+                            font-family:${F};white-space:nowrap;
+                            background:${i === active ? OR : SURF};
+                            color:${i === active ? SURF : MU};
+                            border:1px solid ${i === active ? OR : BDR};">${p}</div>
+            `).join('')}
+        </div>`;
+        };
+
+        // ── Overview track builders ───────────────────────────────────────
+        // dsActive: true = DS lit, false = DS muted
+        // dgActive: true = DG lit, false = DG muted
+        const dsRow = (dsActive) => {
+            const tc = dsActive ? W : MU;
+            const sc = dsActive ? MU : DIM;
+            const ac = dsActive ? OR : DIM;
+            const bg = SURF;
+            const op = dsActive ? '1' : '0.45';
+            return `
+        <div style="opacity:${op};">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+                <div style="width:3px;height:18px;background:${dsActive ? OR : DIM};border-radius:2px;"></div>
+                <span style="font-size:12px;font-weight:700;color:${tc};letter-spacing:0.08em;
+                             text-transform:uppercase;">Digital Solution</span>
+                ${dsActive ? `<span style="font-size:10px;color:${MU};font-style:italic;">primary track</span>` : ''}
+            </div>
+            <div style="display:flex;align-items:center;gap:0;">
+                <div style="padding:9px 16px;border-radius:20px;background:${SURF};
+                            border:1px solid ${BDR};font-size:11px;font-weight:600;
+                            color:${tc};white-space:nowrap;margin-right:8px;">* Trigger</div>
+                ${arr(ac)}
+                <div style="flex:1;background:${bg};border:1px solid ${BDR};border-radius:10px;padding:13px 16px;">
+                    <div style="font-size:11px;font-weight:700;color:${tc};">Project Preparation</div>
+                    <div style="font-size:9.5px;color:${sc};margin-top:3px;">Idea · Feasibility · Spec · Kick-off</div>
+                </div>
+                ${arr(ac)}
+                <div style="flex:1;background:${bg};border:1px solid ${BDR};border-radius:10px;padding:13px 16px;">
+                    <div style="font-size:11px;font-weight:700;color:${tc};">Product Development</div>
+                    <div style="font-size:9.5px;color:${sc};margin-top:3px;">Dev · QA · UAT · Go-Live</div>
+                </div>
+                ${arr(ac)}
+                <div style="flex:1;background:${bg};border:1px solid ${BDR};border-radius:10px;padding:13px 16px;">
+                    <div style="font-size:11px;font-weight:700;color:${tc};">Project Implementation</div>
+                    <div style="font-size:9.5px;color:${sc};margin-top:3px;">Audit · Review · Recommendation</div>
+                </div>
+                ${arr(ac)}
+                <div style="padding:9px 16px;border-radius:20px;
+                            background:${OR};border:1px solid ${dsActive ? OR : BDR};
+                            font-size:11px;font-weight:700;
+                            color:${SURF};white-space:nowrap;margin-left:8px;">Enhancement</div>
+            </div>
+        </div>`;
+        };
+
+        // reversed arrow (right to left)
+        const arrR = (c = DIM) =>
+            `<div style="flex-shrink:0;display:flex;align-items:center;padding:0 6px;">
+            <svg width="18" height="12" viewBox="0 0 18 12">
+                <path d="M18 6 L5 6 M9 2 L4 6 L9 10"
+                      stroke="${c}" stroke-width="1.4" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>`;
+
+        const dgRow = (dgActive) => {
+            const tc = dgActive ? W : MU;
+            const sc = dgActive ? MU : DIM;
+            const ac = dgActive ? OR : DIM;
+            const bg = dgActive ? S2 : SURF;
+            const op = dgActive ? '1' : '0.45';
+            // DG flows right-to-left: Data Control & Access ← Data Management ← Data Source
+            // Plus: Enhancement → Data Control & Access (top connector) shown when active
+            //       Data Source → Trigger (bottom connector) shown when active
+            return `
+        <div style="opacity:${op};">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+                <div style="width:3px;height:18px;background:${dgActive ? OR : DIM};border-radius:2px;"></div>
+                <span style="font-size:12px;font-weight:700;color:${tc};letter-spacing:0.08em;
+                             text-transform:uppercase;">Data Governance</span>
+                ${dgActive ? `<span style="font-size:10px;color:${MU};font-style:italic;">closes the loop</span>` : ''}
+            </div>
+            
+            <div style="display:flex;align-items:center;gap:0;">
+                <div style="padding:9px 16px;border-radius:20px;background:${OR};
+                            border:1px solid ${dgActive ? OR : BDR};font-size:11px;font-weight:600;
+                            color:${SURF};white-space:nowrap;margin-right:8px;">Data Source</div>
+                ${arrR(ac)}
+                <div style="flex:1;background:${SURF};border:1px solid ${BDR};border-radius:10px;padding:13px 16px;">
+                    <div style="font-size:11px;font-weight:700;color:${tc};">Data Management</div>
+                    <div style="font-size:9.5px;color:${sc};margin-top:3px;">ETL · Consolidation · Outcome</div>
+                </div>
+                ${arrR(ac)}
+                <div style="flex:1;background:${SURF};border:1px solid ${BDR};border-radius:10px;padding:13px 16px;">
+                    <div style="font-size:11px;font-weight:700;color:${tc};">Data Control & Access</div>
+                    <div style="font-size:9.5px;color:${sc};margin-top:3px;">Requester · Owner Approval · Management Approval</div>
+                </div>
+            </div>
+        </div>`;
+        };
+
+        // ── Sub-layer content builders ────────────────────────────────────
+        // Each returns HTML for one specific zone only
+
+        // Title zone
+        const titleZone = (isOverview, isPhase4) => {
+            if (isOverview) return `
+            <div style="font-size:13px;font-weight:600;color:${OR};letter-spacing:0.12em;
+                        text-transform:uppercase;margin-bottom:8px;">DDO Department</div>
+            <div style="font-size:40px;font-weight:800;color:${W};letter-spacing:-0.025em;
+                        line-height:1.05;">Core Process</div>
+            <div style="font-size:13px;color:${MU};margin-top:8px;">
+                ${isPhase4 ? '' : 'Press → to explore each phase in detail'}</div>`;
+            return ''; // phases use crumb instead
+        };
+
+        // Phase title zone (phases 1-3)
+        const phaseTitleZone = (idx) => {
+            const phases = [
+                { num: '01', title: 'Project Preparation', sub: 'From idea generation to project kick-off commitment' },
+                { num: '02', title: 'Product Development', sub: 'From software build through testing to go-live deployment' },
+                { num: '03', title: 'Project Implementation', sub: 'Post go-live review, audit and continuous improvement' },
+            ];
+            if (idx < 0 || idx >= 3) return '';
+            const p = phases[idx];
+            return `
+            <div style="margin-bottom:28px;">
+                <div style="font-size:11px;font-weight:700;color:${OR};letter-spacing:0.12em;
+                            text-transform:uppercase;margin-bottom:6px;">Phase ${p.num}</div>
+                <div style="font-size:38px;font-weight:800;color:${W};letter-spacing:-0.025em;">
+                    ${p.title}</div>
+                <div style="font-size:13px;color:${MU};margin-top:6px;">${p.sub}</div>
+            </div>`;
+        };
+
+        // Flow zone — DS overview row or phase nodes
+        const flowZone = (stateIdx) => {
+            if (stateIdx === 0) return dsRow(true);
+            if (stateIdx === 4) return dsRow(false);
+            if (stateIdx === 1) return `
+            <div style="display:grid;
+                        grid-template-columns:auto 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr;
+                        align-items:center;margin-bottom:8px;">
+                <div style="padding:8px 12px;border-radius:20px;background:${SURF};
+                            border:1px solid ${BDR};font-size:10px;font-weight:600;
+                            color:${W};white-space:nowrap;margin-right:2px;">* Trigger</div>
+                ${arr(OR)}
+                <div style="background:${SURF};border:1px solid ${BDR};border-radius:10px;
+                            padding:12px 6px;text-align:center;">
+                    <div style="font-size:10.5px;font-weight:700;color:${W};font-family:${F};
+                                line-height:1.35;">Generating Idea /<br/>Getting Requirement</div>
+                </div>
+                ${arr(OR)}
+                <div style="background:${SURF};border:1px solid ${BDR};border-radius:10px;
+                            padding:12px 6px;text-align:center;">
+                    <div style="font-size:10.5px;font-weight:700;color:${W};font-family:${F};
+                                line-height:1.35;">Project Feasibility</div>
+                </div>
+                ${arr(OR)}
+                <div style="background:${SURF};border:1px solid ${BDR};border-radius:10px;
+                            padding:12px 6px;text-align:center;">
+                    <div style="font-size:10.5px;font-weight:700;color:${W};font-family:${F};
+                                line-height:1.35;">Create Specification</div>
+                </div>
+                ${arr(OR)}
+                <div style="background:${SURF};border:1px solid ${BDR};border-radius:10px;
+                            padding:12px 6px;text-align:center;">
+                    <div style="font-size:10.5px;font-weight:700;color:${W};font-family:${F};
+                                line-height:1.35;">Project Commitment</div>
+                </div>
+                ${arr(OR)}
+                <div style="background:${OR};border:1px solid ${OR};border-radius:10px;
+                            padding:12px 6px;text-align:center;">
+                    <div style="font-size:10.5px;font-weight:700;color:${SURF};font-family:${F};
+                                line-height:1.35;">Kick-off</div>
+                </div>
+            </div>`;
+            if (stateIdx === 2) return `
+            <div style="display:flex;align-items:center;gap:0;margin-bottom:8px;">
+                ${node('Software<br/>Development', 'Build & code')}
+                ${arr(OR)}
+                ${node('Quality<br/>Assurance (QA)', 'Test & validate')}
+                ${arr(OR)}
+                ${node('User Acceptance<br/>Testing (UAT)', 'User sign-off')}
+                ${arr(OR)}
+                ${node('GO-LIVE', 'Deploy to prod', true)}
+            </div>`;
+            if (stateIdx === 3) return `
+            <div style="display:flex;align-items:center;gap:0;margin-bottom:8px;">
+                ${node('Implementation<br/>Audit', 'Review deployment')}
+                ${arr(OR)}
+                ${node('Management<br/>Review', 'Stakeholder eval')}
+                ${arr(OR)}
+                ${node('Recommendation', 'Improvement plan')}
+                ${arr(OR)}
+                ${node('Enhancement', 'Next cycle', true)}
+            </div>`;
+            return '';
+        };
+
+        // Cards zone (phases 1-3)
+        const cardsZone = (stateIdx) => {
+            const data = [
+                {
+                    acts: ['Gather & document requirements', 'Assess technical feasibility', 'Define project scope & timeline', 'Secure stakeholder commitment'],
+                    outs: ['Approved project specification', 'Feasibility report', 'Signed project commitment', 'Kick-off meeting completed'],
+                },
+                {
+                    acts: ['Iterative software development', 'Internal QA testing & bug fixes', 'User acceptance & feedback loops', 'Production deployment'],
+                    outs: ['Tested & approved software build', 'QA sign-off report', 'UAT approval document', 'Live production system'],
+                },
+                {
+                    acts: ['Post-deployment audit & review', 'Management presentation', 'Gap analysis & recommendations', 'Enhancement scoping'],
+                    outs: ['Audit report', 'Management review minutes', 'Improvement recommendations', 'Next enhancement backlog'],
+                },
+            ];
+            if (stateIdx < 1 || stateIdx > 3) return '';
+            const d = data[stateIdx - 1];
+            return `
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                ${card('Key Activities', d.acts)}
+                ${card('Output', d.outs)}
+            </div>`;
+        };
+
+        // DG zone
+        const dgZone = (stateIdx) => {
+            if (stateIdx === 0) return dgRow(false);
+            if (stateIdx === 4) return dgRow(true);
+            return ''; // hidden in phases 1-3
+        };
+
+        Reveal.on('ready', () => {
+            const slidesEl = document.querySelector('.reveal .slides');
+
+            // ── Static shell for slide 4 ──────────────────────────────────
+            // Meta bar and footer never change — built once outside the swap zone
+            const s4 = document.createElement('section');
+            s4.setAttribute('data-transition', 'fade');
+            s4.innerHTML = `
+        <div style="width:100%;height:100%;background:${BG};position:relative;
+                    font-family:${F};overflow:hidden;">
+
+            <!-- STATIC: meta bar -->
+            <div style="position:absolute;top:0;left:0;right:0;height:44px;display:flex;
+                        align-items:center;justify-content:space-between;padding:0 44px;z-index:30;">
+                <span style="font-size:11px;color:${MU};">DDO Business Process</span>
+                <span style="font-size:11px;color:${MU};">Probation Report · 04</span>
+            </div>
+
+            <!-- STATIC: footer -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:40px;display:flex;
+                        align-items:center;justify-content:space-between;padding:0 44px;z-index:30;">
+                <span id="s4-footer-r" style="font-size:10px;color:${DIM};">DDO · Core Process</span>
+            </div>
+
+            <!-- DYNAMIC LAYERS — each animates independently -->
+            <div style="position:absolute;top:52px;left:64px;right:64px;bottom:48px;
+                        display:flex;flex-direction:column;justify-content:center;">
+
+                <!-- Layer: crumb (phases 1-3 only) -->
+                <div id="s4-crumb" style="min-height:28px;margin-bottom:4px;"></div>
+
+                <!-- Layer: title block OR phase title -->
+                <div id="s4-title" style="margin-bottom:20px;">
+                    <div style="font-size:13px;font-weight:600;color:${OR};letter-spacing:0.12em;
+                                text-transform:uppercase;margin-bottom:8px;">DDO Department</div>
+                    <div style="font-size:40px;font-weight:800;color:${W};letter-spacing:-0.025em;
+                                line-height:1.05;">Core Process</div>
+                    <div style="font-size:13px;color:${MU};margin-top:8px;">
+                        Press → to explore each phase in detail</div>
+                </div>
+
+                <!-- Layer: main flow (DS row or phase nodes) -->
+                <div id="s4-flow" style="margin-bottom:0;">${flowZone(0)}</div>
+
+                <!-- Layer: divider (overview only) -->
+                <div id="s4-divider" style="width:100%;height:1px;background:${BDR};
+                            margin:16px 0;"></div>
+
+                <!-- Layer: DG row (overview only) -->
+                <div id="s4-dg">${dgZone(0)}</div>
+
+                <!-- Layer: info cards (phases 1-3 only) -->
+                <div id="s4-cards" style="margin-top:16px;"></div>
+
+            </div>
+
+            <!-- Static SVG: loop connector arrows (shown in overview states 0 & 4) -->
+            <svg id="s4-arrows" style="position:absolute;inset:0;width:100%;height:100%;
+                        pointer-events:none;z-index:6;opacity:0;"
+                 viewBox="0 0 1280 720">
+                <defs>
+                    <marker id="ca1" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                        <path d="M0,0 L0,7 L7,3.5 z" fill="${OR}" opacity="0.75"/>
+                    </marker>
+                    <marker id="ca2" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                        <path d="M0,0 L0,7 L7,3.5 z" fill="${OR}" opacity="0.75"/>
+                    </marker>
+                </defs>
+                <!-- Enhancement (bottom-right of DS row) → Data Control & Access (right of DG row) -->
+                <path d="M 1220,390 C 1330,450 1260,500 1220,500"
+                      fill="none" stroke="${OR}" stroke-width="1.5"
+                      stroke-dasharray="6 4" opacity="0.6"
+                      marker-end="url(#ca1)"/>
+                <!-- Data Source (top of DG row) → Trigger (bottom of DS row) -->
+                <path d="M 60,483 C 50,480 -50,440 60,390"
+                      fill="none" stroke="${OR}" stroke-width="1.5"
+                      stroke-dasharray="6 4" opacity="0.6"
+                      marker-end="url(#ca2)"/>
+            </svg>
+
+        </div>`;
+
+            // Fragment triggers
+            [1, 2, 3, 4].forEach(i => {
+                const f = document.createElement('span');
+                f.className = 'fragment';
+                f.style.display = 'none';
+                f.dataset.state = i;
+                s4.appendChild(f);
+            });
+
+            // ── Granular animated swap ────────────────────────────────────
+            let currentState = 0;
+
+            function animLayer(el, newHTML, onDone) {
+                if (!el) return;
+                if (el.innerHTML.trim() === newHTML.trim()) {
+                    if (onDone) onDone();
+                    return;
+                }
+                gsap.to(el, {
+                    opacity: 0, duration: 0.18, ease: 'power2.in',
+                    onComplete: () => {
+                        el.innerHTML = newHTML;
+                        gsap.to(el, {
+                            opacity: 1, duration: 0.25, ease: 'power2.out',
+                            onComplete: onDone
+                        });
+                    }
+                });
+            }
+
+            function swapToState(newState) {
+                const prev = currentState;
+                currentState = newState;
+
+                const crumbEl = s4.querySelector('#s4-crumb');
+                const titleEl = s4.querySelector('#s4-title');
+                const flowEl = s4.querySelector('#s4-flow');
+                const divEl = s4.querySelector('#s4-divider');
+                const dgEl = s4.querySelector('#s4-dg');
+                const cardsEl = s4.querySelector('#s4-cards');
+                const footerR = s4.querySelector('#s4-footer-r');
+
+                const isOverview = newState === 0 || newState === 4;
+                const isPhase = newState >= 1 && newState <= 3;
+                const phaseIdx = isPhase ? newState - 1 : -1;
+
+                // ── Crumb ──
+                const newCrumb = isPhase ? crumb(phaseIdx) : '';
+                animLayer(crumbEl, newCrumb);
+
+                // ── Title ──
+                let newTitle = '';
+                if (isOverview) {
+                    newTitle = `
+                    <div style="font-size:13px;font-weight:600;color:${OR};letter-spacing:0.12em;
+                                text-transform:uppercase;margin-bottom:8px;">DDO Department</div>
+                    <div style="font-size:40px;font-weight:800;color:${W};letter-spacing:-0.025em;
+                                line-height:1.05;">Core Process</div>
+                    <div style="font-size:13px;color:${MU};margin-top:8px;">
+                        ${newState === 0 ? 'Press → to explore each phase in detail' : ''}</div>`;
+                } else {
+                    newTitle = phaseTitleZone(phaseIdx);
+                }
+                animLayer(titleEl, newTitle);
+
+                // ── Flow (main content, animate with slight scale) ──
+                const newFlow = flowZone(newState);
+                gsap.to(flowEl, {
+                    opacity: 0, scale: 0.97, duration: 0.18, ease: 'power2.in',
+                    onComplete: () => {
+                        flowEl.innerHTML = newFlow;
+                        gsap.fromTo(flowEl,
+                            { opacity: 0, scale: 0.97 },
+                            { opacity: 1, scale: 1, duration: 0.28, ease: 'power2.out' });
+                    }
+                });
+
+                // ── Divider (show only in overview states) ──
+                const showDivider = isOverview;
+                gsap.to(divEl, {
+                    opacity: showDivider ? 1 : 0,
+                    duration: 0.2
+                });
+
+                // ── Loop arrows (show only in overview states 0 & 4) ──
+                const arrowsEl = s4.querySelector('#s4-arrows');
+                if (arrowsEl) gsap.to(arrowsEl, { opacity: isOverview ? 1 : 0, duration: 0.2 });
+
+                // ── DG row ──
+                const newDg = dgZone(newState);
+                animLayer(dgEl, newDg);
+
+                // ── Cards (phases only, stagger up) ──
+                const newCards = cardsZone(newState);
+                if (!isPhase) {
+                    gsap.to(cardsEl, {
+                        opacity: 0, duration: 0.15,
+                        onComplete: () => { cardsEl.innerHTML = ''; }
+                    });
+                } else {
+                    gsap.to(cardsEl, {
+                        opacity: 0, duration: 0.15,
+                        onComplete: () => {
+                            cardsEl.innerHTML = newCards;
+                            const cardEls = cardsEl.querySelectorAll(':scope > div > div');
+                            gsap.fromTo(cardsEl, { opacity: 0 }, { opacity: 1, duration: 0.2 });
+                            gsap.fromTo(cardEls,
+                                { opacity: 0, y: 16 },
+                                {
+                                    opacity: 1, y: 0, duration: 0.35,
+                                    ease: 'power2.out', stagger: 0.08, delay: 0.1
+                                });
+                        }
+                    });
+                }
+
+                // ── Footer right text ──
+                if (footerR) {
+                    const footText = isPhase
+                        ? `Phase 0${newState} of 03`
+                        : newState === 4 ? 'DDO · Full Cycle' : 'DDO · Core Process';
+                    gsap.to(footerR, {
+                        opacity: 0, duration: 0.15,
+                        onComplete: () => {
+                            footerR.textContent = footText;
+                            gsap.to(footerR, { opacity: 1, duration: 0.2 });
+                        }
+                    });
+                }
+            }
+
+            // ── Entrance animation for state 0 ───────────────────────────
+            function entranceAnim() {
+                const layers = ['#s4-title', '#s4-flow', '#s4-divider', '#s4-dg'];
+                const els = layers.map(sel => s4.querySelector(sel)).filter(Boolean);
+                gsap.set(els, { opacity: 0, y: 14 });
+                gsap.to(els, {
+                    opacity: 1, y: 0,
+                    duration: 0.4, ease: 'power2.out',
+                    stagger: 0.08, delay: 0.15
+                });
+                // Arrows fade in after rows are visible
+                const arrowsEl = s4.querySelector('#s4-arrows');
+                if (arrowsEl) {
+                    gsap.set(arrowsEl, { opacity: 0 });
+                    gsap.to(arrowsEl, {
+                        opacity: 1, duration: 0.35, ease: 'power2.out',
+                        delay: 0.15 + (layers.length * 0.08) + 0.1
+                    });
+                }
+            }
+
+            // ── Slide 5: Data Governance ──────────────────────────────────
+            const s5 = document.createElement('section');
+            s5.setAttribute('data-transition', 'fade');
+            s5.innerHTML = `
+        <div style="width:100%;height:100%;background:${BG};position:relative;
+                    font-family:${F};display:flex;flex-direction:column;
+                    justify-content:center;padding:64px 64px 52px;">
+            ${mb('DDO · Data Governance', '05')}
+            <div style="margin-bottom:36px;">
+                <div style="font-size:13px;font-weight:600;color:${OR};letter-spacing:0.12em;
+                            text-transform:uppercase;margin-bottom:8px;">DDO Department</div>
+                <div style="font-size:40px;font-weight:800;color:${W};letter-spacing:-0.025em;">
+                    Data Governance</div>
+                <div style="font-size:13px;color:${MU};margin-top:6px;">
+                    Two parallel sub-tracks ensuring data quality and access control</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+                <div style="background:${SURF};border:1px solid ${BDR};border-radius:14px;padding:28px;height:270px">
+                    <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px;">
+                        <div style="width:3px;height:18px;background:${OR};border-radius:2px;"></div>
+                        <span style="font-size:12px;font-weight:700;color:${W};letter-spacing:0.08em;
+                                     text-transform:uppercase;">Data Control & Access</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:0;margin-bottom:20px;">
+                        ${node('Requester', 'Submit request')}
+                        ${arr(OR)}
+                        ${node('Data Owner<br/>Approval', 'Level 1')}
+                        ${arr(OR)}
+                        ${node('Management<br/>Approval', 'Level 2', true)}
+                    </div>
+                    <div style="padding-top:16px;border-top:1px solid ${BDR};">
+                        <div style="font-size:9.5px;font-weight:700;color:${OR};letter-spacing:0.1em;
+                                    text-transform:uppercase;margin-bottom:8px;">Purpose</div>
+                        <div style="font-size:12px;color:${MU};line-height:1.7;">
+                            Ensure data access is properly governed through a structured
+                            two-level approval chain before any data is granted.
+                        </div>
+                    </div>
+                </div>
+                          <div style="background:${SURF};border:1px solid ${BDR};border-radius:14px;padding:28px;height:270px">
+                    <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px;">
+                        <div style="width:3px;height:18px;background:${OR};border-radius:2px;"></div>
+                        <span style="font-size:12px;font-weight:700;color:${W};letter-spacing:0.08em;
+                                     text-transform:uppercase;">Data Management</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:0;margin-bottom:20px;">
+                        ${node('ETL', 'Extract · Transform · Load')}
+                        ${arr(OR)}
+                        ${node('Data<br/>Consolidation', 'Merge & clean')}
+                        ${arr(OR)}
+                        ${node('Outcome', 'Ready data', true)}
+                    </div>
+                    <div style="padding-top:16px;border-top:1px solid ${BDR};">
+                        <div style="font-size:9.5px;font-weight:700;color:${OR};letter-spacing:0.1em;
+                                    text-transform:uppercase;margin-bottom:8px;">Purpose</div>
+                        <div style="font-size:12px;color:${MU};line-height:1.7;">
+                            Transform raw data from multiple sources into clean,
+                            consolidated datasets ready for analysis and reporting.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            ${fb('DDO · Data Governance')}
+        </div>`;
+
+
+            // ── Slide 6: DDO Services ─────────────────────────────────────
+            const s6 = document.createElement('section');
+            s6.setAttribute('data-transition', 'fade');
+            s6.innerHTML = `
+        <div style="width:100%;height:100%;background:#F0EFEB;position:relative;
+                    font-family:${F};display:grid;grid-template-columns:5fr 7fr;overflow:hidden;">
+
+            <!-- Meta bar -->
+            <div style="position:absolute;top:0;left:0;right:0;height:44px;display:flex;
+                        align-items:center;justify-content:space-between;padding:0 44px;z-index:20;">
+                <span style="font-size:11px;color:#6B6B6B;font-family:${F};">DDO Services</span>
+                <span style="font-size:11px;color:#6B6B6B;font-family:${F};">Probation Report · 06</span>
+            </div>
+
+            <!-- LEFT: Title block -->
+            <div style="display:flex;flex-direction:column;justify-content:center;
+                        padding:64px 48px 64px 64px;">
+                <div style="font-size:13px;font-weight:600;color:${OR};letter-spacing:0.12em;
+                            text-transform:uppercase;margin-bottom:12px;">DDO Department</div>
+                <div style="font-size:52px;font-weight:800;color:#0D0D0D;line-height:1.0;
+                            letter-spacing:-0.03em;">How DDO<br/>Can Help<br/><span style="color:${OR};">You</span></div>
+                <div style="font-size:13px;color:#6B6B6B;margin-top:20px;line-height:1.7;
+                            max-width:280px;">
+                    DDO offers four core services to support all departments across MKP.
+                    Access to any service requires an authorization request.
+                </div>
+
+                <!-- Authorization badge -->
+                <div style="margin-top:36px;display:inline-flex;align-items:center;gap:12px;
+                            background:#0D0D0D;border-radius:14px;padding:14px 20px;
+                            max-width:fit-content;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                         stroke="${OR}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    </svg>
+                    <div>
+                        <div style="font-size:11px;font-weight:700;color:#fff;letter-spacing:0.04em;">
+                            Authorization Required</div>
+                        <div style="font-size:9.5px;color:rgba(255,255,255,0.50);margin-top:2px;">
+                            Submit request to DDO to gain access</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: 2×2 service card grid -->
+            <div style="display:flex;align-items:center;justify-content:flex-start;
+                        padding:64px 64px 64px 32px;">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%;">
+
+                    <!-- Card 1: Request Application -->
+                    <div style="background:#fff;border-radius:16px;padding:28px 24px;
+                                border:1px solid rgba(0,0,0,0.07);display:flex;
+                                flex-direction:column;gap:14px;">
+                        <div style="width:40px;height:40px;border-radius:10px;
+                                    background:${OR};display:flex;align-items:center;
+                                    justify-content:center;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                 stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div style="font-size:14px;font-weight:700;color:#0D0D0D;
+                                        margin-bottom:6px;">Application</div>
+                            <div style="font-size:11.5px;color:#6B6B6B;line-height:1.6;">
+                                Request a custom internal app or digital tool built and maintained by DDO.
+                            </div>
+                        </div>
+                        <div style="margin-top:auto;">
+                            <span style="font-size:10px;font-weight:600;color:${OR};
+                                         letter-spacing:0.08em;text-transform:uppercase;
+                                         border-bottom:1.5px solid ${OR};padding-bottom:2px;">
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Data Visualization -->
+                    <div style="background:#fff;border-radius:16px;padding:28px 24px;
+                                border:1px solid rgba(0,0,0,0.07);display:flex;
+                                flex-direction:column;gap:14px;">
+                        <div style="width:40px;height:40px;border-radius:10px;
+                                    background:${OR};display:flex;align-items:center;
+                                    justify-content:center;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                 stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                                <line x1="2" y1="20" x2="22" y2="20"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div style="font-size:14px;font-weight:700;color:#0D0D0D;
+                                        margin-bottom:6px;">Data Visualization</div>
+                            <div style="font-size:11.5px;color:#6B6B6B;line-height:1.6;">
+                                Request a Power BI dashboard tailored to your department's needs.
+                            </div>
+                        </div>
+                        <div style="margin-top:auto;">
+                            <span style="font-size:10px;font-weight:600;color:${OR};
+                                         letter-spacing:0.08em;text-transform:uppercase;
+                                         border-bottom:1.5px solid ${OR};padding-bottom:2px;">
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Data Report -->
+                    <div style="background:#fff;border-radius:16px;padding:28px 24px;
+                                border:1px solid rgba(0,0,0,0.07);display:flex;
+                                flex-direction:column;gap:14px;">
+                        <div style="width:40px;height:40px;border-radius:10px;
+                                    background:${OR};display:flex;align-items:center;
+                                    justify-content:center;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                 stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div style="font-size:14px;font-weight:700;color:#0D0D0D;
+                                        margin-bottom:6px;">Data Report</div>
+                            <div style="font-size:11.5px;color:#6B6B6B;line-height:1.6;">
+                                Request structured data reports compiled and delivered by DDO on a set schedule.
+                            </div>
+                        </div>
+                        <div style="margin-top:auto;">
+                            <span style="font-size:10px;font-weight:600;color:${OR};
+                                         letter-spacing:0.08em;text-transform:uppercase;
+                                         border-bottom:1.5px solid ${OR};padding-bottom:2px;">
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Alert System -->
+                    <div style="background:#fff;border-radius:16px;padding:28px 24px;
+                                border:1px solid rgba(0,0,0,0.07);display:flex;
+                                flex-direction:column;gap:14px;">
+                        <div style="width:40px;height:40px;border-radius:10px;
+                                    background:${OR};display:flex;align-items:center;
+                                    justify-content:center;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                 stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div style="font-size:14px;font-weight:700;color:#0D0D0D;
+                                        margin-bottom:6px;">Alert System</div>
+                            <div style="font-size:11.5px;color:#6B6B6B;line-height:1.6;">
+                                Request automated alerts triggered by thresholds or data events relevant to your team.
+                            </div>
+                        </div>
+                        <div style="margin-top:auto;">
+                            <span style="font-size:10px;font-weight:600;color:${OR};
+                                         letter-spacing:0.08em;text-transform:uppercase;
+                                         border-bottom:1.5px solid ${OR};padding-bottom:2px;">
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:40px;display:flex;
+                        align-items:center;justify-content:space-between;padding:0 44px;">
+                <span style="font-size:10px;color:#6B6B6B;font-family:${F};">DDO · Services</span>
+            </div>
+        </div>`;
+
+            slidesEl.appendChild(s4);
+            slidesEl.appendChild(s5);
+            slidesEl.appendChild(s6);
+            Reveal.sync();
+
+            // ── Restore correct state on any slide enter/re-enter ─────────
+            function restoreState() {
+                // Read actual fragment index from Reveal — source of truth
+                const indices = Reveal.getIndices();
+                const fragIndex = typeof indices.f === 'number' ? indices.f : -1;
+                // fragments are 0-indexed: -1 = no fragment shown, 0 = first fragment, etc.
+                const targetState = fragIndex >= 0 ? fragIndex + 1 : 0;
+                currentState = targetState;
+
+                // Instantly render the correct state (no animation — just set)
+                const flowEl = s4.querySelector('#s4-flow');
+                const divEl = s4.querySelector('#s4-divider');
+                const dgEl = s4.querySelector('#s4-dg');
+                const cardsEl = s4.querySelector('#s4-cards');
+                const crumbEl = s4.querySelector('#s4-crumb');
+                const titleEl = s4.querySelector('#s4-title');
+
+                const isOverview = targetState === 0 || targetState === 4;
+                const isPhase = targetState >= 1 && targetState <= 3;
+                const phaseIdx = isPhase ? targetState - 1 : -1;
+
+                if (flowEl) flowEl.innerHTML = flowZone(targetState);
+                if (divEl) divEl.style.opacity = isOverview ? '1' : '0';
+                const arrowsEl = s4.querySelector('#s4-arrows');
+                if (arrowsEl) arrowsEl.style.opacity = isOverview ? '1' : '0';
+                if (dgEl) dgEl.innerHTML = dgZone(targetState);
+                if (cardsEl) cardsEl.innerHTML = cardsZone(targetState);
+                if (crumbEl) crumbEl.innerHTML = isPhase ? crumb(phaseIdx) : '';
+                if (titleEl) {
+                    if (isOverview) {
+                        titleEl.innerHTML = `
+                        <div style="font-size:13px;font-weight:600;color:${OR};letter-spacing:0.12em;
+                                    text-transform:uppercase;margin-bottom:8px;">DDO Department</div>
+                        <div style="font-size:40px;font-weight:800;color:${W};letter-spacing:-0.025em;
+                                    line-height:1.05;">Core Process</div>
+                        <div style="font-size:13px;color:${MU};margin-top:8px;">
+                            ${targetState === 0 ? 'Press → to explore each phase in detail' : ''}</div>`;
+                    } else {
+                        titleEl.innerHTML = phaseTitleZone(phaseIdx);
+                    }
+                }
+
+                // Only run entrance animation when landing fresh on state 0
+                if (targetState === 0) entranceAnim();
+            }
+
+            Reveal.on('slidechanged', ({ currentSlide }) => {
+                if (currentSlide !== s4) return;
+                restoreState();
+            });
+
+            if (Reveal.getCurrentSlide() === s4) restoreState();
+
+            Reveal.on('fragmentshown', ({ fragment }) => {
+                if (fragment.dataset.state === undefined) return;
+                swapToState(parseInt(fragment.dataset.state));
+            });
+
+            Reveal.on('fragmenthidden', ({ fragment }) => {
+                if (fragment.dataset.state === undefined) return;
+                swapToState(Math.max(0, parseInt(fragment.dataset.state) - 1));
+            });
+        });
+    </script>
+
+    <!-- ══════════════════════════════
+         SLIDE 7 — DDO PRODUCTS
+         Interactive card grid with GSAP modal
+    ══════════════════════════════ -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        // Product data
+        const PRODUCTS = [
+            {
+                id: 'semar',
+                name: 'SEMAR',
+                img: 'semar.png',
+                sub: 'Central Application Operational Site',
+                features: [
+                    'Plant: Input ticket breakdown, data defect, schedule/unschedule maintenance',
+                    'Engineering: Target plan, setting fleet digger',
+                    'HSE: Create mine permit, MKP employee / Vendor SIMPER, Log Clinic',
+                    'HRG: Attendance, canteen validation, employee site entry & exit',
+                    'Canteen: Regular food ordering, event/back charge ordering',
+                    'Production: Input matching fleet, operator mapping, Ritase',
+                ]
+            },
+            {
+                id: 'mpower',
+                name: 'mPower',
+                img: 'mpower.png',
+                sub: 'Performance Management Apps',
+                features: [
+                    'IDP (Individual Development Program): Competency assessment for soft skill & hard skill',
+                    'IPP (Individual Performance Planning): KPI evaluation per year for individual',
+                    'DPP (Department Performance Planning): KPI evaluation per year for departments'
+                ]
+            },
+            {
+                id: 'mcloud',
+                name: 'mCloud',
+                img: 'mcloud.png',
+                sub: 'Data Warehouse',
+                features: [
+                    'General: M-Now, Equipment Monitoring, Optima Dashboard',
+                    'Finance: ROI Dashboard',
+                    'SCM: Inventory monitoring',
+                    'HR: Employee Demography, Attendance (All, Finance, SCM)',
+                    'HR: Health Monitoring HO & Site, Vehicle Monitoring',
+                    'HR: Declaration Monitoring, MPP Monitoring, Handover Asset',
+                ]
+            },
+            {
+                id: 'hris',
+                name: 'HRIS',
+                img: 'hris.png',
+                sub: 'Central Apps Administrative Site',
+                features: [
+                    'Attendance & overtime management',
+                    'Site entry & exit tracking',
+                    'MCU (Medical Check Up) management',
+                    'Employee termination & email',
+                    'Onsite employee data',
+                    'Outstanding monitoring',
+                ]
+            },
+            {
+                id: 'sapsf',
+                name: 'SAP SuccessFactors',
+                img: 'sf.png',
+                sub: 'E-Recruitment Platform',
+                features: [
+                    'End-to-end recruitment needs management',
+                    'Candidate tracking and evaluation',
+                    'Job posting and applicant management',
+                ]
+            },
+            {
+                id: 'payday',
+                name: 'PayDay',
+                img: 'payday.png',
+                sub: 'Employee Self Service',
+                features: [
+                    'Pay slip access and download',
+                    'Attendance tracking and records',
+                    'Online approval workflows',
+                ]
+            },
+            {
+                id: 'dashcam',
+                name: 'Dashcam',
+                img: 'mceasy.webp',
+                sub: 'Vehicle Monitoring System',
+                features: [
+                    'Driver monitoring via dashcam integration',
+                    'Logs and reports driving behavior events: drowsiness, conversations, and phone usage',
+                ]
+            },
+            {
+                id: 'sisakty',
+                name: 'Sisakty',
+                img: 'sisakty.png',
+                sub: 'Internal System',
+                features: [
+                    'Feature placeholder — to be updated',
+                    'Feature placeholder — to be updated',
+                    'Feature placeholder — to be updated',
+                ]
+            },
+            {
+                id: 'medicoal',
+                name: 'Medicoal',
+                img: 'medicoal.jpeg',
+                sub: 'Medical & Health Platform',
+                features: [
+                    'Site clinic management application',
+                    'Records employee illness history, clinic visit dates, and upcoming visit schedules',
+                ]
+            },
+            {
+                id: 'fums',
+                name: 'FUMS',
+                img: 'fums.jpeg',
+                sub: 'Internal Management System',
+                features: [
+                    'Logs each fuel fill-up: date, volume(liters), and hour meter reading',
+                    'Tracks cumulative operating costs per unit, including additional expenses (e.g.unit cost 21M + fuel 2M = 23M)',
+                ]
+            },
+            {
+                id: 'digiman',
+                name: 'DIGIMAN',
+                img: 'digiman.jpeg',
+                sub: 'Digital Management Platform',
+                features: [
+                    'Mechanic KPI tracking',
+                    'Lead time monitoring per job / work order',
+                    'e-MAR (Electronic Mechanic Activity Report), daily log of all service activities performed',
+                ]
+            },
+            {
+                id: 'lms',
+                name: 'Ruang Kerja LMS',
+                img: 'ruangkerja.png',
+                sub: 'Learning Management System',
+                features: [
+                    'Learning Management System(LMS)',
+                    'Soft skill development through structured video learning content',
+                ]
+            },
+        ];
+
+        Reveal.on('ready', () => {
+            const slidesEl = document.querySelector('.reveal .slides');
+            const OR = '#1f8dba';
+            const F = "'Inter',-apple-system,sans-serif";
+
+            const s7 = document.createElement('section');
+            s7.setAttribute('data-transition', 'fade');
+
+            s7.innerHTML = `
+        <div style="width:100%;height:100%;background:#F0EFEB;position:relative;
+                    font-family:${F};overflow:hidden;">
+
+            <!-- Meta bar -->
+            <div style="position:absolute;top:0;left:0;right:0;height:44px;display:flex;
+                        align-items:center;justify-content:space-between;padding:0 44px;z-index:20;">
+                <span style="font-size:11px;color:#6B6B6B;">DDO Products</span>
+                <span style="font-size:11px;color:#6B6B6B;">Probation Report · 07</span>
+            </div>
+
+            <!-- Title -->
+            <div style="position:absolute;top:52px;left:64px;z-index:10;">
+                <div style="font-size:13px;font-weight:600;color:${OR};letter-spacing:0.12em;
+                            text-transform:uppercase;margin-bottom:4px;">DDO Department</div>
+                <div style="font-size:30px;font-weight:800;color:#0D0D0D;letter-spacing:-0.025em;">
+                    Technology We Use</div>
+            </div>
+            <div style="position:absolute;top:64px;right:64px;z-index:10;">
+                <span style="font-size:11px;color:#6B6B6B;font-style:italic;">
+                    Click any product to view details</span>
+            </div>
+
+            <!-- Product grid -->
+            <div id="product-grid" style="position:absolute;top:130px;left:64px;right:64px;
+                        bottom:48px;display:grid;grid-template-columns:repeat(4,1fr);
+                        grid-template-rows:repeat(3,1fr);gap:14px;">
+                ${PRODUCTS.map(p => `
+                <div class="prod-card" data-id="${p.id}"
+                     style="background:#fff;border-radius:14px;border:1px solid rgba(0,0,0,0.07);
+                            display:flex;flex-direction:column;align-items:center;justify-content:center;
+                            gap:12px;padding:20px 14px;cursor:pointer;position:relative;
+                            transition:box-shadow 0.2s,transform 0.15s;">
+                    <!-- Logo placeholder -->
+                    <div class="prod-logo" style="width:64px;height:64px;border-radius:14px;
+                                display:flex;align-items:center;justify-content:center;
+                                font-size:12px;font-weight:700;color:#999;text-align:center;
+                                line-height:1.2;">
+                        <img src="./assets/${p.img}" width="100%" height="100%" style="object-fit:contain;"/>
+                    </div>
+                    <!-- Name -->
+                    <div style="font-size:11.5px;font-weight:700;color:#0D0D0D;text-align:center;
+                                line-height:1.3;letter-spacing:0.01em;">${p.name}</div>
+                </div>`).join('')}
+            </div>
+
+            <!-- Modal overlay -->
+            <div id="prod-overlay" style="position:absolute;inset:0;background:rgba(0,0,0,0);
+                        z-index:50;display:none;align-items:center;justify-content:center;">
+            </div>
+
+            <!-- Modal card (animated) -->
+            <div id="prod-modal" style="position:absolute;z-index:60;
+                        background:#fff;border-radius:20px;
+                        box-shadow:0 32px 80px rgba(0,0,0,0.22);
+                        display:none;overflow:hidden;pointer-events:auto;">
+                <!-- Left panel -->
+                <div id="modal-left" style="position:absolute;left:0;top:0;bottom:0;width:38%;
+                            background:${OR};display:flex;flex-direction:column;
+                            align-items:center;justify-content:center;gap:16px;padding:32px;">
+                    <div id="modal-logo" style="width:80px;height:80px;border-radius:18px;
+                                background:${SURF};border:1px solid rgba(255,255,255,0.10);
+                                display:flex;align-items:center;justify-content:center;
+                                font-size:16px;font-weight:700;color:rgba(255,255,255,0.5);"></div>
+                    <div style="text-align:center;">
+                        <div id="modal-name" style="font-size:18px;font-weight:800;color:#fff;
+                                    letter-spacing:-0.01em;margin-bottom:6px;"></div>
+                        <div id="modal-sub" style="font-size:10px;color:rgba(255,255,255,0.45);
+                                    line-height:1.5;"></div>
+                    </div>
+                    <!-- Orange accent bar -->
+                    <div style="width:32px;height:3px;background:${OR};border-radius:2px;"></div>
+                </div>
+                <!-- Right panel -->
+                <div id="modal-right" style="position:absolute;right:0;top:0;bottom:0;width:62%;
+                            padding:36px 36px 36px 32px;overflow-y:auto;display:flex;
+                            flex-direction:column;justify-content:center;">
+                    <div style="font-size:10px;font-weight:700;color:${OR};letter-spacing:0.12em;
+                                text-transform:uppercase;margin-bottom:16px;">Key Features</div>
+                    <ul id="modal-features" style="list-style:none;padding:0;margin:0;
+                                display:flex;flex-direction:column;gap:10px;"></ul>
+                </div>
+                <!-- Close button -->
+                <button id="modal-close"
+                        style="position:absolute;top:16px;right:16px;width:30px;height:30px;
+                               border-radius:50%;background:rgba(0,0,0,0.08);border:none;
+                               cursor:pointer;display:flex;align-items:center;justify-content:center;
+                               font-size:14px;color:#666;z-index:10;">✕</button>
+            </div>
+
+            <!-- Footer -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:40px;display:flex;
+                        align-items:center;justify-content:space-between;padding:0 44px;z-index:10;">
+                <span style="font-size:10px;color:#6B6B6B;">DDO · Products</span>
+            </div>
+        </div>`;
+
+            slidesEl.appendChild(s7);
+            Reveal.sync();
+
+            // ── Interactive logic (runs after DOM is added) ──────────────
+            setTimeout(() => {
+                const overlay = s7.querySelector('#prod-overlay');
+                const modal = s7.querySelector('#prod-modal');
+                const closeBtn = s7.querySelector('#modal-close');
+                const cards = s7.querySelectorAll('.prod-card');
+
+                let isOpen = false;
+
+                // Hover effects
+                cards.forEach(card => {
+                    card.addEventListener('mouseenter', () => {
+                        if (isOpen) return;
+                        gsap.to(card, { y: -4, boxShadow: '0 12px 32px rgba(0,0,0,0.12)', duration: 0.2 });
+                    });
+                    card.addEventListener('mouseleave', () => {
+                        if (isOpen) return;
+                        gsap.to(card, { y: 0, boxShadow: '0 0px 0px rgba(0,0,0,0)', duration: 0.2 });
+                    });
+
+                    card.addEventListener('click', () => {
+                        const id = card.dataset.id;
+                        const product = PRODUCTS.find(p => p.id === id);
+                        if (!product || isOpen) return;
+
+                        // Populate modal content
+                        modal.querySelector('#modal-logo').innerHTML = `<img src="assets/${product.img}" 
+                                                                         alt="${product.name}" style="width:100%;height:100%;object-fit:contain;padding:10px;">`;
+                        modal.querySelector('#modal-name').textContent = product.name;
+                        modal.querySelector('#modal-sub').textContent = product.sub;
+
+                        const featEl = modal.querySelector('#modal-features');
+                        featEl.innerHTML = product.features.map(f => `
+                        <li style="display:flex;align-items:flex-start;gap:10px;">
+                            <span style="flex-shrink:0;width:6px;height:6px;border-radius:50%;
+                                         background:${OR};margin-top:5px;"></span>
+                            <span style="font-size:12px;color:#444;line-height:1.6;">${f}</span>
+                        </li>`).join('');
+
+                        // Get card position for FLIP-style origin
+                        const cardRect = card.getBoundingClientRect();
+                        const slideRect = s7.getBoundingClientRect();
+                        const cx = cardRect.left - slideRect.left + cardRect.width / 2;
+                        const cy = cardRect.top - slideRect.top + cardRect.height / 2;
+
+                        // Target modal size & position (centered in slide)
+                        const mw = 720, mh = 420;
+                        const tx = (slideRect.width - mw) / 2;
+                        const ty = (slideRect.height - mh) / 2;
+
+                        // Set initial state at card origin
+                        gsap.set(modal, {
+                            display: 'block',
+                            left: cx, top: cy,
+                            width: cardRect.width, height: cardRect.height,
+                            xPercent: -50, yPercent: -50,
+                            scale: 1, opacity: 0,
+                            borderRadius: '14px',
+                        });
+
+                        // Show overlay
+                        overlay.style.display = 'flex';
+                        gsap.to(overlay, { background: 'rgba(0,0,0,0.45)', duration: 0.3 });
+
+                        // Animate modal to full size
+                        gsap.to(modal, {
+                            left: tx, top: ty,
+                            width: mw, height: mh,
+                            xPercent: 0, yPercent: 0,
+                            opacity: 1,
+                            borderRadius: '20px',
+                            duration: 0.45,
+                            ease: 'power3.out',
+                        });
+
+                        isOpen = true;
+
+                        // Dim other cards
+                        cards.forEach(c => {
+                            if (c !== card) gsap.to(c, { opacity: 0.4, duration: 0.3 });
+                        });
+                    });
+                });
+
+                const closeModal = () => {
+                    if (!isOpen) return;
+                    gsap.to(modal, {
+                        opacity: 0, scale: 0.92,
+                        duration: 0.3, ease: 'power2.in',
+                        onComplete: () => {
+                            modal.style.display = 'none';
+                            gsap.set(modal, { scale: 1 });
+                        }
+                    });
+                    gsap.to(overlay, {
+                        background: 'rgba(0,0,0,0)',
+                        duration: 0.3,
+                        onComplete: () => { overlay.style.display = 'none'; }
+                    });
+                    cards.forEach(c => gsap.to(c, { opacity: 1, y: 0, duration: 0.25 }));
+                    isOpen = false;
+                };
+
+                closeBtn.addEventListener('click', closeModal);
+                overlay.addEventListener('click', closeModal);
+
+                // Escape key
+                document.addEventListener('keydown', e => {
+                    if (e.key === 'Escape') closeModal();
+                });
+
+            }, 500);
+        });
+    </script>
+
+    <!-- ══════════════════════════════
+         SLIDE 8 — PROBATION PROGRESS
+         Fragment-based states with GSAP transitions
+    ══════════════════════════════ -->
+    <script>
+        (() => {
+            const BG = '#F0EFEB';
+            const SURF = '#FFFFFF';
+            const S2 = '#E8E7E3';
+            const BDR = 'rgba(0,0,0,0.08)';
+            const OR = '#1f8dba';
+            const W = '#0D0D0D';
+            const MU = '#6B6B6B';
+            const DIM = 'rgba(0,0,0,0.14)';
+            const F = "'Inter',-apple-system,sans-serif";
+
+            // ── Shared helpers ────────────────────────────────────────────
+            const pill = (text, col = OR) =>
+                `<span style="display:inline-block;padding:3px 11px;border-radius:20px;
+                          font-size:10px;font-weight:600;background:${col}22;
+                          color:${col};border:1px solid ${col}44;margin:3px 3px 3px 0;
+                          font-family:${F};">${text}</span>`;
+
+            const bullet = (text, col = MU) =>
+                `<li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;">
+                <span style="flex-shrink:0;width:6px;height:6px;border-radius:50%;
+                             background:${OR};margin-top:5px;"></span>
+                <span style="font-size:12px;color:${col};line-height:1.65;font-family:${F};">${text}</span>
+            </li>`;
+
+            const crumb8 = (active) => {
+                const ps = ['Observation', 'Execution', 'Evaluation'];
+                return `<div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
+                <span style="font-size:10px;font-weight:700;color:${OR};letter-spacing:0.1em;
+                             text-transform:uppercase;font-family:${F};margin-right:4px;">
+                    PROBATION PROGRESS</span>
+                ${ps.map((p, i) => `
+                    ${i > 0 ? `<svg width="10" height="8" viewBox="0 0 10 8">
+                        <path d="M0 4 L7 4 M4 1 L8 4 L4 7" stroke="${DIM}"
+                              stroke-width="1.1" fill="none" stroke-linecap="round"/>
+                    </svg>`: ''}
+                    <div style="padding:4px 13px;border-radius:16px;font-size:9.5px;font-weight:500;
+                                font-family:${F};white-space:nowrap;
+                                background:${i === active ? OR : SURF};
+                                color:${i === active ? SURF : MU};
+                                border:1px solid ${i === active ? OR : BDR};">${p}</div>
+                `).join('')}
+            </div>`;
+            };
+
+            const metaHTML = `
+            <div style="position:absolute;top:0;left:0;right:0;height:44px;display:flex;
+                        align-items:center;justify-content:space-between;padding:0 44px;z-index:30;">
+                <span style="font-size:11px;color:${MU};font-family:${F};">Probation Progress</span>
+                <span style="font-size:11px;color:${MU};font-family:${F};">Probation Report · 08</span>
+            </div>`;
+
+            const footHTML = (r = '') => `
+            <div style="position:absolute;bottom:0;left:0;right:0;height:40px;display:flex;
+                        align-items:center;justify-content:space-between;padding:0 44px;z-index:30;">
+                <span style="font-size:10px;color:${DIM};font-family:${F};">${r}</span>
+            </div>`;
+
+            // ── STATE CONTENT ─────────────────────────────────────────────
+
+            // State 0: Overview
+            const stateOverview = `
+            <div style="margin-bottom:40px;">
+                <div style="font-size:13px;font-weight:600;color:${OR};letter-spacing:0.12em;
+                            text-transform:uppercase;margin-bottom:8px;">DDO Department</div>
+                <div style="display:flex;align-items:baseline;gap:20px;">
+                    <div style="font-size:40px;font-weight:800;color:${W};letter-spacing:-0.025em;
+                                line-height:1.05;">Probation Progress</div>
+                    <div style="padding:6px 16px;border-radius:20px;background:${OR};
+                                font-size:12px;font-weight:700;color:${SURF};white-space:nowrap;">
+                        3 Month Probation</div>
+                </div>
+                <div style="font-size:13px;color:${MU};margin-top:8px;">
+                    Press → to explore each phase in detail</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+
+                <!-- Phase 1: Observation -->
+                <div style="background:${SURF};border:1px solid ${BDR};border-radius:14px;
+                            padding:28px 24px;display:flex;flex-direction:column;gap:14px;">
+                    <div style="display:flex;align-items:center;justify-content:space-between;">
+                        <div style="font-size:11px;font-weight:700;color:${OR};letter-spacing:0.1em;
+                                    text-transform:uppercase;">01</div>
+                        <div style="padding:3px 10px;border-radius:20px;background:rgba(100,200,100,0.12);
+                                    border:1px solid rgba(100,200,100,0.3);font-size:9px;font-weight:600;
+                                    color:#6DC97A;">✓ Complete</div>
+                    </div>
+                    <div style="font-size:20px;font-weight:800;color:${W};letter-spacing:-0.01em;
+                                line-height:1.1;">Observation</div>
+                    <div style="width:32px;height:2px;background:${OR};border-radius:2px;"></div>
+                    <div style="font-size:11.5px;color:${MU};line-height:1.65;">
+                        Requirement gathering across all departments, mining operations study,
+                        and full tech stack immersion.
+                    </div>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:4px;">
+                        ${pill('Laravel')}${pill('Vue.js')}${pill('GCP')}${pill('PostgreSQL')}
+                    </div>
+                </div>
+
+                <!-- Phase 2: Execution -->
+                <div style="background:${SURF};border:1px solid ${OR}44;border-radius:14px;
+                            padding:28px 24px;display:flex;flex-direction:column;gap:14px;
+                            position:relative;overflow:hidden;">
+                    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:${OR};"></div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;">
+                        <div style="font-size:11px;font-weight:700;color:${OR};letter-spacing:0.1em;
+                                    text-transform:uppercase;">02</div>
+                        <div style="padding:3px 10px;border-radius:20px;background:rgba(100,200,100,0.12);
+                                    border:1px solid rgba(100,200,100,0.3);font-size:9px;font-weight:600;
+                                    color:#6DC97A;">✓ Complete</div>
+                    </div>
+                    <div style="font-size:20px;font-weight:800;color:${W};letter-spacing:-0.01em;
+                                line-height:1.1;">Execution</div>
+                    <div style="width:32px;height:2px;background:${OR};border-radius:2px;"></div>
+                    <div style="font-size:11.5px;color:${MU};line-height:1.65;">
+                        Shipped 8 features on mPortal and built Node-RED automation
+                        for Ruang Kerja API.
+                    </div>
+                    <div style="margin-top:auto;">
+                        <div style="font-size:36px;font-weight:800;color:${OR};
+                                    letter-spacing:-0.02em;line-height:1;">8</div>
+                        <div style="font-size:10px;color:${MU};margin-top:2px;">features shipped</div>
+                    </div>
+                </div>
+
+                <!-- Phase 3: Evaluation -->
+                <div style="background:${SURF};border:1px solid ${BDR};border-radius:14px;
+                            padding:28px 24px;display:flex;flex-direction:column;gap:14px;">
+                    <div style="display:flex;align-items:center;justify-content:space-between;">
+                        <div style="font-size:11px;font-weight:700;color:${OR};letter-spacing:0.1em;
+                                    text-transform:uppercase;">03</div>
+                        <div style="padding:3px 10px;border-radius:20px;background:rgba(31,141,186,0.12);
+                                    border:1px solid rgba(31,141,186,0.3);font-size:9px;font-weight:600;
+                                    color:${OR};">● In Progress</div>
+                    </div>
+                    <div style="font-size:20px;font-weight:800;color:${W};letter-spacing:-0.01em;
+                                line-height:1.1;">Evaluation</div>
+                    <div style="width:32px;height:2px;background:${DIM};border-radius:2px;"></div>
+                    <div style="font-size:11.5px;color:${MU};line-height:1.65;">
+                        Performance review and feedback session. Currently in progress
+                        as development work continues.
+                    </div>
+                </div>
+
+            </div>`;
+
+            // State 1: Observation detail
+            const stateObs = `
+            ${crumb8(0)}
+            <div style="margin-bottom:28px;">
+                <div style="font-size:11px;font-weight:700;color:${OR};letter-spacing:0.12em;
+                            text-transform:uppercase;margin-bottom:6px;">Phase 01</div>
+                <div style="font-size:38px;font-weight:800;color:${W};letter-spacing:-0.025em;">
+                    Observation</div>
+                <div style="font-size:13px;color:${MU};margin-top:6px;">
+                    Learning the environment. Business, operations, and technology</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+                <!-- Requirement Gathering -->
+                <div style="background:${SURF};border:1px solid ${BDR};border-radius:14px;padding:24px;">
+                    <div style="font-size:10px;font-weight:700;color:${OR};letter-spacing:0.12em;
+                                text-transform:uppercase;margin-bottom:14px;">Requirement Gathering</div>
+                    <ul style="list-style:none;padding:0;margin:0;">
+                        ${bullet('Studied business flow of each department firsthand across all MKP departments')}
+                        ${bullet('Observed mining operations directly on-site to understand end-to-end processes')}
+                        ${bullet('Analyzed digitalization potential across operational and administrative workflows')}
+                    </ul>
+                </div>
+
+                <!-- Tech Stack -->
+                <div style="background:${SURF};border:1px solid ${BDR};border-radius:14px;padding:24px;">
+                    <div style="font-size:10px;font-weight:700;color:${OR};letter-spacing:0.12em;
+                                text-transform:uppercase;margin-bottom:14px;">Technology Stack Learned</div>
+
+                    <!-- Application Stack -->
+                    <div style="font-size:10px;font-weight:600;color:${MU};letter-spacing:0.08em;
+                                text-transform:uppercase;margin-bottom:8px;">Application</div>
+                    <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:16px;">
+                        ${pill('PHP Laravel')}${pill('Vue.js')}${pill('PostgreSQL')}
+                    </div>
+
+                    <!-- Infrastructure -->
+                    <div style="font-size:10px;font-weight:600;color:${MU};letter-spacing:0.08em;
+                                text-transform:uppercase;margin-bottom:8px;">Infrastructure</div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                        <div style="background:${OR}22;border-radius:10px;padding:12px;">
+                            <div style="font-size:10px;font-weight:700;color:${OR};margin-bottom:4px;">
+                                On-Premise</div>
+                            <div style="font-size:10px;color:${MU};line-height:1.5;">
+                                Server located at site for low-latency local operations</div>
+                        </div>
+                        <div style="background:${OR}22;border-radius:10px;padding:12px;">
+                            <div style="font-size:10px;font-weight:700;color:${OR};margin-bottom:4px;">
+                                GCP (Head Office)</div>
+                            <div style="font-size:10px;color:${MU};line-height:1.5;">
+                                VM · Cloud SQL · Cloud Storage<br/>
+                                Chosen for stability, large community & enterprise security</div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+
+            // State 2: mPortal SSO Gateway (between Observation and Execution)
+            const gwApps = [
+                { label: 'SEMAR', angle: -120 },
+                { label: 'mCloud', angle: -60 },
+                { label: 'HRIS', angle: 0 },
+                { label: 'mPower', angle: 60 },
+                { label: 'PayDay', angle: 120 },
+                { label: '+ more', angle: 180 },
+            ];
+            const GWX = 380, GWY = 195, GWR = 155;
+
+            const stateGateway = `
+            ${crumb8(1)}
+            <div style="margin-bottom:16px;margin-top:48px;">
+                <div style="font-size:38px;font-weight:800;color:${W};letter-spacing:-0.025em;text-align:center;">
+                    mPortal</div>
+                <div style="font-size:13px;color:${MU};margin-top:6px;text-align:center;">
+                    <span style="color:${OR};">One login</span>. Seamless access to every MKP application</div>
+            </div>
+            <div id="s8-gw-wrap" style="flex:1;display:flex;align-items:center;
+                        justify-content:center;min-height:0;">
+                <svg id="s8-gw-svg" viewBox="0 0 760 390"
+                     style="width:100%;height:100%;overflow:visible;">
+
+                    ${gwApps.map((a, i) => {
+                const rad = a.angle * Math.PI / 180;
+                const x1 = GWX + 66 * Math.cos(rad);
+                const y1 = GWY + 66 * Math.sin(rad);
+                const x2 = GWX + GWR * Math.cos(rad);
+                const y2 = GWY + GWR * Math.sin(rad);
+                return `<line class="s8-gw-spoke" data-i="${i}"
+                                    x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}"
+                                    x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}"
+                                    stroke="rgba(31,141,186,0.45)" stroke-width="1.5"
+                                    stroke-dasharray="5 4" style="opacity:0;"/>`;
+            }).join('')}
+
+                    ${gwApps.map((a, i) => {
+                const rad = a.angle * Math.PI / 180;
+                const nx = GWX + GWR * Math.cos(rad);
+                const ny = GWY + GWR * Math.sin(rad);
+                const isDashed = a.label === '';
+                return `<g class="s8-gw-node" data-i="${i}"
+                                   style="opacity:0;transform-origin:${nx.toFixed(1)}px ${ny.toFixed(1)}px;">
+                                <rect x="${(nx - 36).toFixed(1)}" y="${(ny - 16).toFixed(1)}"
+                                      width="72" height="32" rx="8"
+                                      fill="${isDashed ? 'transparent' : SURF}"
+                                      stroke="${isDashed ? 'rgba(255,255,255,0.18)' : BDR}"
+                                      stroke-dasharray="${isDashed ? '4 3' : 'none'}"
+                                      stroke-width="1"/>
+                                <text x="${nx.toFixed(1)}" y="${(ny + 5).toFixed(1)}"
+                                      text-anchor="middle" font-family="${F}"
+                                      font-size="11" font-weight="700"
+                                      fill="${isDashed ? MU : W}">${a.label}</text>
+                            </g>`;
+            }).join('')}
+
+                    <g id="s8-gw-hub" style="opacity:0;transform-origin:${GWX}px ${GWY}px;">
+                        <circle cx="${GWX}" cy="${GWY}" r="62"
+                                fill="rgba(31,141,186,0.08)"
+                                stroke="rgba(31,141,186,0.30)" stroke-width="1"/>
+                        <image href="./assets/mportal.png"
+                               x="${GWX - 75}" y="${GWY - 75}" width="150" height="150"/>
+                    </g>
+
+                    <text id="s8-gw-sub" x="${GWX}" y="${GWY + 90}" text-anchor="middle"
+                          font-family="${F}" font-size="9.5" fill="${MU}"
+                          style="opacity:0;">Single Sign-On Gateway</text>
+                </svg>
+            </div>`;
+
+            // State 3: Execution detail
+            const stateExec = `
+            ${crumb8(1)}
+            <div style="margin-bottom:28px;">
+                <div style="font-size:11px;font-weight:700;color:${OR};letter-spacing:0.12em;
+                            text-transform:uppercase;margin-bottom:6px;">Phase 02</div>
+                <div style="display:flex;align-items:center;gap:20px;">
+                    <div style="font-size:38px;font-weight:800;color:${W};letter-spacing:-0.025em;">
+                        Execution</div>
+                    <div style="text-align:center;padding:8px 20px;border-radius:12px;
+                                background:${OR}18;border:1px solid ${OR}44;">
+                        <div style="font-size:32px;font-weight:800;color:${OR};line-height:1;">8</div>
+                        <div style="font-size:9px;color:${MU};margin-top:1px;font-weight:600;
+                                    letter-spacing:0.06em;text-transform:uppercase;">Features Shipped</div>
+                    </div>
+                </div>
+                <div style="font-size:13px;color:${MU};margin-top:6px;">
+                    Building, automating and delivering. From API to UI</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+                <!-- Node-RED -->
+                <div style="background:${SURF};border:1px solid ${BDR};border-radius:14px;padding:24px;">
+                    <div style="font-size:10px;font-weight:700;color:${OR};letter-spacing:0.12em;
+                                text-transform:uppercase;margin-bottom:14px;">API Automation</div>
+                    <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px;">
+                        ${pill('Node-RED')}${pill('Ruang Kerja LMS')}
+                    </div>
+                    <ul style="list-style:none;padding:0;margin:0;">
+                        ${bullet('Enhanced Ruang Kerja API integration using Node-RED')}
+                        ${bullet('Automated periodic employee leave input, eliminating manual data entry')}
+                    </ul>
+                </div>
+
+                <!-- mPortal features -->
+                <div style="background:${SURF};border:1px solid ${BDR};border-radius:14px;padding:24px;">
+                    <div style="font-size:10px;font-weight:700;color:${OR};letter-spacing:0.12em;
+                                text-transform:uppercase;margin-bottom:14px;">mPortal - Features Delivered</div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+                        ${[
+                    'Menu Configuration',
+                    'Submenu Configuration',
+                    'Emergency Contact',
+                    'Employee Contact',
+                    'Annual MCU HO',
+                    'Mini MCU HO',
+                    'Attendance HO',
+                    'Employee Leave',
+                ].map(f => `
+                        <div style="display:flex;align-items:center;gap:8px;padding:8px 10px;
+                                    border-radius:8px;">
+                            <div style="width:5px;height:5px;border-radius:50%;
+                                        background:${OR};flex-shrink:0;"></div>
+                            <span style="font-size:11px;color:${MU};font-family:${F};">${f}</span>
+                        </div>`).join('')}
+                    </div>
+                </div>
+            </div>`;
+
+            // State 3: Evaluation detail
+            const stateEval = `
+            ${crumb8(2)}
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;
+                        justify-content:center;text-align:center;padding:20px 0;">
+                <!-- Pulsing badge -->
+                <div style="display:inline-flex;align-items:center;gap:10px;
+                            padding:8px 20px;border-radius:20px;
+                            background:${OR}18;border:1px solid ${OR}44;
+                            margin-bottom:28px;">
+                    <div style="width:8px;height:8px;border-radius:50%;background:${OR};
+                                animation:pulse 1.5s ease-in-out infinite;"></div>
+                    <span style="font-size:11px;font-weight:700;color:${OR};letter-spacing:0.08em;
+                                 text-transform:uppercase;">In Progress</span>
+                </div>
+                <div style="font-size:11px;font-weight:700;color:${OR};letter-spacing:0.12em;
+                            text-transform:uppercase;margin-bottom:10px;">Phase 03</div>
+                <div style="font-size:52px;font-weight:800;color:${W};letter-spacing:-0.03em;
+                            line-height:1.0;margin-bottom:16px;">Evaluation</div>
+                <div style="font-size:14px;color:${MU};line-height:1.7;max-width:520px;
+                            margin-bottom:36px;">
+                    Performance review and feedback session is currently underway.
+                    Development work is still in progress. Results and evaluation
+                    will be presented upon completion.
+                </div>
+                <!-- Three forward-looking points -->
+                <div style="display:flex;gap:16px;justify-content:center;">
+                    ${[
+                    ['Pending', 'Formal performance review session'],
+                    ['Pending', 'Manager feedback & scoring'],
+                    ['Ongoing', 'Feature development continues'],
+                ].map(([status, text]) => `
+                    <div style="background:${SURF};border:1px solid ${BDR};border-radius:12px;
+                                padding:16px 20px;text-align:left;min-width:200px;">
+                        <div style="font-size:9px;font-weight:700;color:${OR};letter-spacing:0.1em;
+                                    text-transform:uppercase;margin-bottom:6px;">${status}</div>
+                        <div style="font-size:12px;color:${MU};line-height:1.5;">${text}</div>
+                    </div>`).join('')}
+                </div>
+            </div>
+            <style>
+                @keyframes pulse {
+                    0%, 100% { opacity: 1; transform: scale(1); }
+                    50% { opacity: 0.4; transform: scale(0.85); }
+                }
+            </style>`;
+
+            const stateContents = [stateOverview, stateObs, stateGateway, stateExec, stateEval];
+
+            // ── Build slide ───────────────────────────────────────────────
+            Reveal.on('ready', () => {
+                const slidesEl = document.querySelector('.reveal .slides');
+
+                const s8 = document.createElement('section');
+                s8.setAttribute('data-transition', 'fade');
+
+                // Outer shell — content swaps inside #prog-inner
+                s8.innerHTML = `
+            <div style="width:100%;height:100%;background:${BG};position:relative;
+                        font-family:${F};overflow:hidden;">
+                ${metaHTML}
+                <div id="prog-inner" style="position:absolute;top:52px;left:64px;right:64px;
+                            bottom:48px;display:flex;flex-direction:column;justify-content:center;">
+                    ${stateOverview}
+                </div>
+                ${footHTML('3 Month Probation')}
+            </div>`;
+
+                // Fragment triggers
+                [1, 2, 3, 4].forEach(i => {
+                    const f = document.createElement('span');
+                    f.className = 'fragment';
+                    f.style.display = 'none';
+                    f.dataset.prog = i;
+                    s8.appendChild(f);
+                });
+
+                slidesEl.appendChild(s8);
+                Reveal.sync();
+
+                // ── Gateway diagram entrance animation ───────────────────
+                const animateGateway = (container) => {
+                    const hub = container.querySelector('#s8-gw-hub');
+                    const sub = container.querySelector('#s8-gw-sub');
+                    const spokes = container.querySelectorAll('.s8-gw-spoke');
+                    const nodes = container.querySelectorAll('.s8-gw-node');
+                    if (!hub) return;
+                    gsap.set(hub, { opacity: 0, scale: 0.5 });
+                    gsap.set(sub, { opacity: 0 });
+                    gsap.set(spokes, { opacity: 0, scaleX: 0 });
+                    gsap.set(nodes, { opacity: 0, scale: 0.6 });
+                    const tl = gsap.timeline({ delay: 0.15 });
+                    tl.to(hub, { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(1.8)' });
+                    tl.to(sub, { opacity: 1, duration: 0.3 }, '-=0.1');
+                    tl.to(spokes, { opacity: 1, scaleX: 1, duration: 0.35, ease: 'power2.out', stagger: 0.06 }, '-=0.15');
+                    tl.to(nodes, { opacity: 1, scale: 1, duration: 0.3, ease: 'back.out(1.5)', stagger: 0.06 }, '-=0.3');
+                };
+
+                // ── GSAP swap with fade + slide ───────────────────────────
+                const swapProg = (idx, dir = 1) => {
+                    const inner = s8.querySelector('#prog-inner');
+                    if (!inner) return;
+
+                    // Slide out current content
+                    gsap.to(inner, {
+                        opacity: 0,
+                        x: dir * -40,
+                        duration: 0.22,
+                        ease: 'power2.in',
+                        onComplete: () => {
+                            inner.innerHTML = stateContents[idx];
+                            // Slide in new content from opposite side
+                            gsap.fromTo(inner,
+                                { opacity: 0, x: dir * 40 },
+                                {
+                                    opacity: 1, x: 0, duration: 0.28, ease: 'power2.out',
+                                    onComplete: () => { if (idx === 2) animateGateway(inner); }
+                                }
+                            );
+                        }
+                    });
+                };
+
+                Reveal.on('fragmentshown', ({ fragment }) => {
+                    if (fragment.dataset.prog === undefined) return;
+                    const idx = parseInt(fragment.dataset.prog);
+                    swapProg(idx, 1);
+                });
+
+                Reveal.on('fragmenthidden', ({ fragment }) => {
+                    if (fragment.dataset.prog === undefined) return;
+                    const idx = Math.max(0, parseInt(fragment.dataset.prog) - 1);
+                    swapProg(idx, -1);
+                });
+            });
+        })();
+    </script>
+
+    <!-- ══════════════════════════════
+         SLIDE 9 — MPORTAL DEMO (iframe)
+    ══════════════════════════════ -->
+    <script>
+        Reveal.on('ready', () => {
+            const slidesEl = document.querySelector('.reveal .slides');
+            const OR = '#1f8dba';
+            const F = "'Inter',-apple-system,sans-serif";
+
+            const s9 = document.createElement('section');
+            s9.setAttribute('data-transition', 'fade');
+            s9.style.padding = '0';
+            s9.style.margin = '0';
+
+            s9.innerHTML = `
+        <div style="width:100%;height:100%;position:relative;overflow:hidden;
+                    font-family:${F};background:#F0EFEB;">
+
+            <!-- Top bar -->
+            <div style="position:absolute;top:0;left:0;right:0;height:44px;
+                        display:flex;align-items:center;justify-content:space-between;
+                        padding:0 44px;z-index:30;
+                        background:linear-gradient(to bottom,rgba(240,239,235,0.9) 0%,transparent 100%);
+                        pointer-events:none;">
+                <span style="font-size:11px;color:#6B6B6B;">mPortal · Live Demo</span>
+                <span style="font-size:11px;color:#6B6B6B;">Probation Report · 09</span>
+            </div>
+
+            <!-- Full-slide iframe — constrained to slide bounds -->
+            <iframe
+                src="https://mportal.devmkp.com/login"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;
+                       border:none;display:block;"
+                allowfullscreen
+                allow="autoplay; clipboard-read; clipboard-write">
+            </iframe>
+        </div>`;
+
+            slidesEl.appendChild(s9);
+            Reveal.sync();
+        });
+    </script>
+
+    <!-- ══════════════════════════════
+         SLIDE 10 — WHAT'S NEXT
+         State 0: SSO story + gateway diagram
+         State 1: Proposals (left text swaps, right shows cards)
+    ══════════════════════════════ -->
+    <script>
+        Reveal.on('ready', () => {
+            const slidesEl = document.querySelector('.reveal .slides');
+            const OR = '#1f8dba';
+            const BLK = '#0D0D0D';
+            const GY = '#6B6B6B';
+            const BG = '#F0EFEB';
+            const F = "'Inter',-apple-system,sans-serif";
+
+            // ── Icons ─────────────────────────────────────────────────────
+            const icon = (path) =>
+                `<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                ${path}</svg>`;
+
+            // ── Proposal cards data ───────────────────────────────────────
+            const proposals = [
+                {
+                    icon: icon(`<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>`),
+                    title: 'Plant Tool Management',
+                    desc: 'Digitalize inventory tracking, tool checkout, and maintenance scheduling.',
+                },
+                {
+                    icon: icon(`<path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
+                            <rect x="9" y="3" width="6" height="4" rx="1"/>
+                            <line x1="9" y1="12" x2="15" y2="12"/>
+                            <line x1="9" y1="16" x2="13" y2="16"/>`),
+                    title: 'Mechanic Checklist',
+                    desc: 'Digitalize paper maintenance checklists. Real-time submission and full audit trail.',
+                },
+                {
+                    icon: icon(`<rect x="5" y="2" width="14" height="20" rx="2"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18"/>`),
+                    title: 'Mobile Apps',
+                    desc: 'Bring mPortal and mPower to mobile for field workers and on-the-go management.',
+                },
+            ];
+
+            // ── LEFT PANEL HTML per state ─────────────────────────────────
+            const leftState0 = `
+            <div style="font-size:13px;font-weight:600;color:${OR};letter-spacing:0.12em;
+                        text-transform:uppercase;margin-bottom:12px;">Innovation</div>
+            <div style="font-size:46px;font-weight:800;color:${BLK};line-height:1.0;
+                        letter-spacing:-0.03em;margin-bottom:20px;">
+                One Login.<br/><span style="color:${OR};">Everything.</span>
+            </div>
+            <div style="font-size:12.5px;color:${GY};line-height:1.75;margin-bottom:28px;
+                        max-width:300px;">
+                At BRI, I built a similar SSO-based platform that unified multiple
+                internal apps under a single credential. mPortal can evolve into
+                that same gateway. One login that grants seamless, authorized
+                access to every application within MKP.
+            </div>
+            <div style="display:inline-flex;align-items:center;gap:10px;
+                        background:${BLK};border-radius:12px;padding:12px 18px;
+                        max-width:fit-content;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="${OR}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="4"/>
+                    <path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+                </svg>
+                <div>
+                    <div style="font-size:10px;font-weight:700;color:#fff;letter-spacing:0.04em;">
+                        Prior Experience</div>
+                    <div style="font-size:9px;color:rgba(255,255,255,0.45);margin-top:3px;">
+                        Built similar SSO at PT. Bank Rakyat Indonesia</div>
+                </div>
+            </div>`;
+
+            const leftState1 = `
+            <div style="font-size:13px;font-weight:600;color:${OR};letter-spacing:0.12em;
+                        text-transform:uppercase;margin-bottom:12px;">What's Next</div>
+            <div style="font-size:46px;font-weight:800;color:${BLK};line-height:1.0;
+                        letter-spacing:-0.03em;margin-bottom:20px;">
+                A glimpse of<br/><span style="color:${OR};">possibilities.</span>
+            </div>
+            <div style="font-size:12.5px;color:${GY};line-height:1.75;max-width:300px;">
+                These ideas target the operational gaps I observed during my probation. Each one is designed to reduce manual work and improve visibility on the ground.
+            </div>`;
+
+            // ── GATEWAY DIAGRAM (right panel, state 0) ───────────────────
+            // Hub center: cx=380, cy=260 in a 760×520 viewBox
+            const apps = [
+                { label: 'SEMAR', angle: -120 },
+                { label: 'mCloud', angle: -60 },
+                { label: 'HRIS', angle: 0 },
+                { label: 'mPower', angle: 60 },
+                { label: 'PayDay', angle: 120 },
+                { label: '+ more', angle: 180 },
+            ];
+            const HX = 380, HY = 260, R = 190;
+
+            const gatewayDiagram = `
+        <div id="s10-diagram" style="width:100%;height:100%;display:flex;
+                    align-items:center;justify-content:center;">
+            <svg id="s10-svg" viewBox="0 0 760 520"
+                 style="width:100%;height:100%;overflow:visible;">
+
+                <!-- Spoke lines (drawn from hub outward) -->
+                ${apps.map((a, i) => {
+                const rad = a.angle * Math.PI / 180;
+                const x1 = HX + 66 * Math.cos(rad);
+                const y1 = HY + 66 * Math.sin(rad);
+                const x2 = HX + R * Math.cos(rad);
+                const y2 = HY + R * Math.sin(rad);
+                return `<line class="s10-spoke" data-i="${i}"
+                                x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}"
+                                stroke="rgba(14,100,232,0.45)" stroke-width="1.5"
+                                stroke-dasharray="5 4"
+                                style="transform-origin:${HX}px ${HY}px;
+                                       opacity:0;"/>`;
+            }).join('')}
+
+                <!-- App nodes -->
+                ${apps.map((a, i) => {
+                const rad = a.angle * Math.PI / 180;
+                const nx = HX + R * Math.cos(rad);
+                const ny = HY + R * Math.sin(rad);
+                const isDashed = a.label === '+ more';
+                return `<g class="s10-appnode" data-i="${i}"
+                               style="opacity:0;transform-origin:${nx}px ${ny}px;">
+                        <rect x="${nx - 36}" y="${ny - 16}" width="72" height="32" rx="8"
+                              fill="${isDashed ? 'transparent' : '#fff'}"
+                              stroke="${isDashed ? 'rgba(0,0,0,0.18)' : 'rgba(0,0,0,0.08)'}"
+                              stroke-dasharray="${isDashed ? '4 3' : 'none'}"
+                              stroke-width="1"/>
+                        <text x="${nx}" y="${ny + 5}" text-anchor="middle"
+                              font-family="${F}" font-size="11" font-weight="700"
+                              fill="${isDashed ? '#aaa' : '#0D0D0D'}">${a.label}</text>
+                    </g>`;
+            }).join('')}
+
+                <!-- Hub: mPortal -->
+                <g id="s10-hub" style="opacity:0;transform-origin:${HX}px ${HY}px;">
+                    <!-- Outer glow ring -->
+                    <circle cx="${HX}" cy="${HY}" r="62"
+                            fill="rgba(14,100,232,0.06)"
+                            stroke="rgba(14,100,232,0.20)" stroke-width="1"/>
+                    <image href="./assets/mportal.png" x="${HX - 75}" y="${HY - 75}" width="150" height="150"/>
+                </g>
+
+                <!-- Hub subtitle -->
+                <text id="s10-hubsub" x="${HX}" y="${HY + 52}" text-anchor="middle"
+                      font-family="${F}" font-size="9.5" fill="${GY}"
+                      style="opacity:0;">Single Sign-On Gateway</text>
+
+            </svg>
+        </div>`;
+
+            // ── PROPOSAL CARDS (right panel, state 1) ────────────────────
+            const proposalCards = `
+        <div id="s10-cards" style="display:grid;grid-template-columns:1fr 1fr 1fr;
+                    gap:14px;width:100%;">
+            ${proposals.map(p => `
+            <div class="s10-card" style="background:#fff;border-radius:16px;
+                        padding:24px;border:1px solid rgba(0,0,0,0.07);
+                        display:flex;flex-direction:column;gap:12px;">
+                <div style="width:40px;height:40px;border-radius:10px;
+                            background:${OR};display:flex;align-items:center;
+                            justify-content:center;">${p.icon}</div>
+                <div>
+                    <div style="font-size:13px;font-weight:700;color:${BLK};
+                                margin-bottom:5px;">${p.title}</div>
+                    <div style="font-size:11.5px;color:${GY};line-height:1.65;">
+                        ${p.desc}</div>
+                </div>
+                <div style="margin-top:auto;">
+                    <span style="font-size:9.5px;font-weight:700;color:${OR};
+                                 letter-spacing:0.08em;text-transform:uppercase;
+                                 border-bottom:1.5px solid ${OR};padding-bottom:2px;">
+                </div>
+            </div>`).join('')}
+        </div>`;
+
+            // ── Build slide ───────────────────────────────────────────────
+            const s10 = document.createElement('section');
+            s10.setAttribute('data-transition', 'fade');
+            s10.innerHTML = `
+        <div style="width:100%;height:100%;background:${BG};position:relative;
+                    font-family:${F};display:grid;grid-template-columns:5fr 7fr;overflow:hidden;">
+
+            <!-- Meta bar -->
+            <div style="position:absolute;top:0;left:0;right:0;height:44px;display:flex;
+                        align-items:center;justify-content:space-between;padding:0 44px;z-index:20;">
+                <span style="font-size:11px;color:${GY};">Innovation</span>
+                <span style="font-size:11px;color:${GY};">Probation Report · 10</span>
+            </div>
+
+            <!-- LEFT panel -->
+            <div id="s10-left" style="display:flex;flex-direction:column;justify-content:center;
+                        padding:64px 48px 64px 64px;opacity:0;">
+                <div id="s10-left-content">${leftState1}</div>
+            </div>
+
+            <!-- RIGHT panel -->
+            <div id="s10-right" style="display:flex;align-items:center;justify-content:flex-start;
+                        padding:44px 32px 44px 16px;position:relative;opacity:0;">
+                <div id="s10-right-content" style="width:100%;">
+                    ${proposalCards}
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:40px;display:flex;
+                        align-items:center;justify-content:space-between;padding:0 44px;">
+                <span style="font-size:10px;color:${GY};">DDO · Innovation</span>
+            </div>
+        </div>`;
+
+            slidesEl.appendChild(s10);
+            Reveal.sync();
+
+            // ── Entrance animation ────────────────────────────────────────
+            function animateEntrance() {
+                const left = s10.querySelector('#s10-left');
+                const right = s10.querySelector('#s10-right');
+                const rightContent = s10.querySelector('#s10-right-content');
+                const cardsWrap = rightContent ? rightContent.querySelector('#s10-cards') : null;
+                const cards = rightContent ? rightContent.querySelectorAll('.s10-card') : [];
+
+                gsap.set(left, { opacity: 0, x: -28 });
+                gsap.set(right, { opacity: 1 });
+                if (cardsWrap) gsap.set(cardsWrap, { opacity: 0 });
+                gsap.set(cards, { opacity: 0, y: 24 });
+
+                const tl = gsap.timeline({ delay: 0.15 });
+                tl.to(left, { opacity: 1, x: 0, duration: 0.5, ease: 'power3.out' });
+                if (cardsWrap) tl.to(cardsWrap, { opacity: 1, duration: 0.15 }, '-=0.2');
+                tl.to(cards, { opacity: 1, y: 0, duration: 0.38, ease: 'power2.out', stagger: 0.09 }, '-=0.1');
+
+                cards.forEach(c => {
+                    c.addEventListener('mouseenter', () =>
+                        gsap.to(c, { y: -4, boxShadow: '0 12px 28px rgba(0,0,0,0.10)', duration: 0.2 }));
+                    c.addEventListener('mouseleave', () =>
+                        gsap.to(c, { y: 0, boxShadow: 'none', duration: 0.2 }));
+                });
+            }
+
+            // ── Reveal event hooks ────────────────────────────────────────
+            Reveal.on('slidechanged', ({ currentSlide }) => {
+                if (currentSlide !== s10) return;
+                animateEntrance();
+            });
+
+            if (Reveal.getCurrentSlide() === s10) animateEntrance();
+        });
+    </script>
+
+    <!-- ══════════════════════════════
+             SLIDE 11 — ANY QUESTIONS
+        ══════════════════════════════ -->
+    <script>
+        Reveal.on('ready', () => {
+            const slidesEl = document.querySelector('.reveal .slides');
+            const OR = '#1f8dba';
+            const F = "'Inter',-apple-system,sans-serif";
+
+            const s11 = document.createElement('section');
+            s11.setAttribute('data-transition', 'fade');
+            s11.innerHTML = `
+            <div style="width:100%;height:100%;background:#F0EFEB;position:relative;
+                        font-family:${F};display:flex;flex-direction:column;
+                        align-items:center;justify-content:center;overflow:hidden;">
+
+                <!-- Ambient glow -->
+                <div style="position:absolute;width:700px;height:700px;border-radius:50%;
+                            background:radial-gradient(circle,rgba(31,141,186,0.07) 0%,transparent 65%);
+                            pointer-events:none;"></div>
+
+                <!-- Top-left corner line accent -->
+                <div style="position:absolute;top:0;left:0;width:120px;height:2px;
+                            background:${OR};opacity:0.5;"></div>
+                <div style="position:absolute;top:0;left:0;width:2px;height:120px;
+                            background:${OR};opacity:0.5;"></div>
+
+                <!-- Bottom-right corner line accent -->
+                <div style="position:absolute;bottom:0;right:0;width:120px;height:2px;
+                            background:${OR};opacity:0.5;"></div>
+                <div style="position:absolute;bottom:0;right:0;width:2px;height:120px;
+                            background:${OR};opacity:0.5;"></div>
+
+                <!-- Main content -->
+                <div id="s11-content" style="text-align:center;position:relative;z-index:10;
+                            opacity:0;">
+                    <div id="s11-title" style="font-size:108px;font-weight:800;color:#0D0D0D;
+                                letter-spacing:-0.04em;line-height:0.92;
+                                opacity:0;transform:translateY(30px);">
+                        Any<br/><span style="color:${OR};">Questions?</span>
+                    </div>
+                </div>
+    
+                <!-- Footer -->
+                <div style="position:absolute;bottom:0;left:0;right:0;height:40px;display:flex;
+                            align-items:center;justify-content:center;padding:0 44px;">
+                </div>
+            </div>`;
+
+            slidesEl.appendChild(s11);
+            Reveal.sync();
+
+            // ── GSAP entrance on slide enter ──────────────────────────────
+            function animateS11() {
+                const label = s11.querySelector('#s11-label');
+                const title = s11.querySelector('#s11-title');
+                const name = s11.querySelector('#s11-name');
+                const wrap = s11.querySelector('#s11-content');
+
+                gsap.set(wrap, { opacity: 1 });
+                gsap.set(label, { opacity: 0, y: -10 });
+                gsap.set(title, { opacity: 0, y: 30 });
+                gsap.set(name, { opacity: 0 });
+
+                const tl = gsap.timeline({ delay: 0.2 });
+
+                tl.to(label, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' });
+                tl.to(title, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.15');
+                tl.to(name, { opacity: 1, duration: 0.5, ease: 'power2.out' }, '-=0.2');
+            }
+
+            Reveal.on('slidechanged', ({ currentSlide }) => {
+                if (currentSlide !== s11) return;
+                animateS11();
+            });
+
+            if (Reveal.getCurrentSlide() === s11) animateS11();
+        });
+    </script>
+
+    <!-- ══════════════════════════════
+         SLIDE 12 — THANK YOU
+    ══════════════════════════════ -->
+    <script>
+        Reveal.on('ready', () => {
+            const slidesEl = document.querySelector('.reveal .slides');
+            const OR = '#1f8dba';
+            const F = "'Inter',-apple-system,sans-serif";
+
+            const s11 = document.createElement('section');
+            s11.setAttribute('data-transition', 'fade');
+            s11.innerHTML = `
+        <div style="width:100%;height:100%;background:#F0EFEB;position:relative;
+                    font-family:${F};display:flex;flex-direction:column;
+                    align-items:center;justify-content:center;overflow:hidden;">
+
+            <!-- Ambient glow -->
+            <div style="position:absolute;width:700px;height:700px;border-radius:50%;
+                        background:radial-gradient(circle,rgba(31,141,186,0.07) 0%,transparent 65%);
+                        pointer-events:none;"></div>
+
+            <!-- Top-left corner line accent -->
+            <div style="position:absolute;top:0;left:0;width:120px;height:2px;
+                        background:${OR};opacity:0.5;"></div>
+            <div style="position:absolute;top:0;left:0;width:2px;height:120px;
+                        background:${OR};opacity:0.5;"></div>
+
+            <!-- Bottom-right corner line accent -->
+            <div style="position:absolute;bottom:0;right:0;width:120px;height:2px;
+                        background:${OR};opacity:0.5;"></div>
+            <div style="position:absolute;bottom:0;right:0;width:2px;height:120px;
+                        background:${OR};opacity:0.5;"></div>
+
+            <!-- Main content -->
+            <div id="s11-content" style="text-align:center;position:relative;z-index:10;
+                        opacity:0;">
+
+                <div id="s11-label" style="font-size:11px;font-weight:600;color:${OR};
+                            letter-spacing:0.18em;text-transform:uppercase;
+                            margin-bottom:28px;opacity:0;">
+                    Probation Report · 2026
+                </div>
+
+                <div id="s11-title" style="font-size:108px;font-weight:800;color:#0D0D0D;
+                            letter-spacing:-0.04em;line-height:0.92;
+                            opacity:0;transform:translateY(30px);">
+                    Thank<br/><span style="color:${OR};">You!</span>
+                </div>
+
+                <div id="s11-name" style="margin-top:40px;font-size:15px;font-weight:400;
+                            color:#6B6B6B;letter-spacing:0.06em;
+                            opacity:0;">
+                    Rifqi Aditya &nbsp;·&nbsp; Software Engineer &nbsp;·&nbsp; DDO Department
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:40px;display:flex;
+                        align-items:center;justify-content:center;padding:0 44px;">
+            </div>
+        </div>`;
+
+            slidesEl.appendChild(s11);
+            Reveal.sync();
+
+            // ── GSAP entrance on slide enter ──────────────────────────────
+            function animateS11() {
+                const label = s11.querySelector('#s11-label');
+                const title = s11.querySelector('#s11-title');
+                const name = s11.querySelector('#s11-name');
+                const wrap = s11.querySelector('#s11-content');
+
+                gsap.set(wrap, { opacity: 1 });
+                gsap.set(label, { opacity: 0, y: -10 });
+                gsap.set(title, { opacity: 0, y: 30 });
+                gsap.set(name, { opacity: 0 });
+
+                const tl = gsap.timeline({ delay: 0.2 });
+
+                tl.to(label, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' });
+                tl.to(title, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.15');
+                tl.to(name, { opacity: 1, duration: 0.5, ease: 'power2.out' }, '-=0.2');
+            }
+
+            Reveal.on('slidechanged', ({ currentSlide }) => {
+                if (currentSlide !== s11) return;
+                animateS11();
+            });
+
+            if (Reveal.getCurrentSlide() === s11) animateS11();
+        });
+    </script>
+</body>
+
+</html>
